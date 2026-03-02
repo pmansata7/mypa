@@ -343,5 +343,5 @@ Update `System/usage_log.md` to mark weekly review as used.
 
 | Integration | MCP Server | Tools Used |
 |-------------|------------|------------|
-| Work | dex-work-mcp | `list_tasks`, `get_week_progress`, `get_quarterly_goals`, `get_goal_status` |
-| Calendar | dex-calendar-mcp | `calendar_get_events_with_attendees` |
+| Work | lumi-work-mcp | `list_tasks`, `get_week_progress`, `get_quarterly_goals`, `get_goal_status` |
+| Calendar | lumi-calendar-mcp | `calendar_get_events_with_attendees` |

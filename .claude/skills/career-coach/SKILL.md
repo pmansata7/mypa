@@ -250,7 +250,7 @@ Generate a manager-ready weekly report:
 
 ---
 
-*Generated via Dex Career Coach*
+*Generated via Lumi Career Coach*
 ```
 
 **After generating:**
@@ -374,7 +374,7 @@ Specific steps for next month:
 
 ---
 
-*This reflection synthesizes patterns from daily reviews, meeting notes, and career evidence captured in Dex.*
+*This reflection synthesizes patterns from daily reviews, meeting notes, and career evidence captured in Lumi.*
 ```
 
 **After generating:**
@@ -577,7 +577,7 @@ What I want to develop in the coming year:
 
 ---
 
-*This self-review was prepared using evidence captured in Dex throughout [YEAR]. See `05-Areas/Career/Evidence/` for detailed examples.*
+*This self-review was prepared using evidence captured in Lumi throughout [YEAR]. See `05-Areas/Career/Evidence/` for detailed examples.*
 ```
 
 **After generating:**
@@ -822,7 +822,7 @@ When discussing promotion with your manager, emphasize:
 
 ---
 
-*This assessment is based on your career ladder and evidence captured in Dex. Discuss with your manager to validate and refine.*
+*This assessment is based on your career ladder and evidence captured in Lumi. Discuss with your manager to validate and refine.*
 ```
 
 **After generating:**
@@ -832,7 +832,7 @@ When discussing promotion with your manager, emphasize:
 
 **Saved to:** `05-Areas/Career/Assessments/YYYY-MM-DD - Promotion Assessment.md`
 
-**This is a snapshot based on current evidence.** As you continue working, Dex will capture more examples that strengthen your case.
+**This is a snapshot based on current evidence.** As you continue working, Lumi will capture more examples that strengthen your case.
 
 **Suggested Next Steps:**
 
@@ -933,7 +933,7 @@ This keeps a timeline of your feedback and progress.
 
 ---
 
-## Integration with Dex System
+## Integration with Lumi System
 
 ### Daily Reviews
 
@@ -1149,7 +1149,7 @@ When saving career evidence, use these formats:
 - **Reference evidence** — When discussing accomplishments, point to specific work
 - **Update your ladder** — Career frameworks change; keep yours current
 
-### For Dex
+### For Lumi
 
 - **Listen for patterns** — If they mention the same challenge 3 times, surface it
 - **Connect to pillars** — Career goals should align with strategic focus

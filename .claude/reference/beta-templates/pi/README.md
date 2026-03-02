@@ -40,7 +40,7 @@ Pi will start and be ready to build tools for you.
 Ask Pi to create something:
 
 ```
-Build me a tool that lists all my overdue tasks from the Dex task system
+Build me a tool that lists all my overdue tasks from the Lumi task system
 ```
 
 Pi will:
@@ -49,9 +49,9 @@ Pi will:
 3. Save it to `.pi/extensions/`
 4. The tool is now available
 
-## How Pi Connects to Dex
+## How Pi Connects to Lumi
 
-Pi communicates with Dex through an **MCP bridge** — a translator that lets Pi read your tasks, calendar, and other Dex data.
+Pi communicates with Lumi through an **MCP bridge** — a translator that lets Pi read your tasks, calendar, and other Lumi data.
 
 This means tools Pi builds can:
 - Access your task list
@@ -59,7 +59,7 @@ This means tools Pi builds can:
 - Look up people pages
 - Query meeting notes
 
-The bridge is pre-configured in `.pi/extensions/dex-mcp-bridge.ts`.
+The bridge is pre-configured in `.pi/extensions/lumi-mcp-bridge.ts`.
 
 ## What to Build with Pi
 
@@ -71,11 +71,11 @@ Pi excels at **analytical and cross-cutting tools**:
 - Ad-hoc dashboards
 - Role-specific workflows
 
-For **deterministic operations** (task CRUD, calendar writes), continue using Dex directly — reliability matters more than flexibility there.
+For **deterministic operations** (task CRUD, calendar writes), continue using Lumi directly — reliability matters more than flexibility there.
 
 ## Pi vs Claude Code
 
-| | Claude Code (Dex) | Pi |
+| | Claude Code (Lumi) | Pi |
 |---|---|---|
 | **Add features** | Edit skill files | Describe what you want |
 | **Iteration** | Find file → edit → test | "Also do X" → done |
@@ -88,14 +88,14 @@ For **deterministic operations** (task CRUD, calendar writes), continue using De
 
 ### MCP Bridge
 
-The bridge is pre-installed at `.pi/extensions/dex-mcp-bridge.ts`. It connects to:
+The bridge is pre-installed at `.pi/extensions/lumi-mcp-bridge.ts`. It connects to:
 
 - **task-mcp** — For task operations
 - **calendar-mcp** — For calendar access
 
 ### AGENTS.md
 
-Pi's context about your Dex vault is in `.pi/AGENTS.md`. Edit this to give Pi more context about your specific setup.
+Pi's context about your Lumi vault is in `.pi/AGENTS.md`. Edit this to give Pi more context about your specific setup.
 
 ## Troubleshooting
 
@@ -107,12 +107,12 @@ Reinstall Pi:
 npm install -g @mariozechner/pi-coding-agent
 ```
 
-### Pi can't access Dex data
+### Pi can't access Lumi data
 
 Check the MCP bridge is present:
 
 ```bash
-ls .pi/extensions/dex-mcp-bridge.ts
+ls .pi/extensions/lumi-mcp-bridge.ts
 ```
 
 If missing, run `/beta-activate PILAUNCH2026` again.
@@ -140,7 +140,7 @@ Your feedback shapes this integration. Message Dave directly on WhatsApp with:
 
 ### 0.1.0 (Current)
 - Initial beta release
-- MCP bridge to Dex task and calendar systems
+- MCP bridge to Lumi task and calendar systems
 - Auto-installation during activation
 
 ---

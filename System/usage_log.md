@@ -1,4 +1,4 @@
-# Dex Usage Tracking
+# Lumi Usage Tracking
 
 **Purpose:** Track feature adoption to help guide users to unused capabilities, and provide journey metadata for analytics.
 
@@ -8,7 +8,7 @@
 
 ## Core Workflows (8 features)
 
-- [ ] Daily planning (`/daily-plan`)
+- [x] Daily planning (`/daily-plan`)
 - [ ] Daily review (`/review` or `/daily-review`)
 - [ ] Weekly planning (`/week-plan`)
 - [ ] Weekly review (`/week-review`)
@@ -61,12 +61,12 @@
 
 ## System Discovery & Improvement (7 features)
 
-- [ ] Feature discovery (`/dex-level-up`)
-- [ ] What's new check (`/dex-whats-new`)
-- [ ] Backlog review (`/dex-backlog`)
-- [ ] Improvement workshop (`/dex-improve`)
+- [ ] Feature discovery (`/lumi-level-up`)
+- [ ] What's new check (`/lumi-whats-new`)
+- [ ] Backlog review (`/lumi-backlog`)
+- [ ] Improvement workshop (`/lumi-improve`)
 - [ ] Idea captured (via MCP)
-- [ ] Dex updated (`/dex-update`)
+- [ ] Lumi updated (`/lumi-update`)
 - [ ] Learnings reviewed (`/learnings`)
 
 ## Integrations (6 features)
@@ -74,9 +74,10 @@
 - [ ] Calendar connected (via Calendar MCP)
 - [ ] Calendar synced daily
 - [ ] Granola connected (via Granola MCP)
-- [ ] Obsidian enabled (`/dex-obsidian-setup`)
+- [ ] Obsidian enabled (`/lumi-obsidian-setup`)
 - [ ] Pi used (`/pi`)
 - [ ] ScreenPipe used (`/screen-recall` or `/screen-summary`)
+- [x] Confluence connected (via Confluence MCP)
 
 ## AI Configuration (5 features)
 
@@ -91,14 +92,14 @@
 - [ ] Prompt improvement via API (`/prompt-improver`)
 - [ ] Custom MCP created (`/create-mcp`)
 - [ ] MCP integrated (`/integrate-mcp`)
-- [ ] Demo mode used (`/dex-demo`)
+- [ ] Demo mode used (`/lumi-demo`)
 
 ---
 
 ## Tracking Metadata
 
-- **Last dex-level-up prompt:** (not yet prompted)
-- **First daily plan:** (not yet run)
+- **Last lumi-level-up prompt:** (not yet prompted)
+- **First daily plan:** 2026-02-12
 - **Setup date:** (set during onboarding)
 
 ---
@@ -113,7 +114,7 @@ Tracks whether user has been asked about anonymous feature usage tracking.
 
 **Values:**
 - `Consent decision: pending` → Not yet asked
-- `Consent decision: opted-in` → User agreed to help improve Dex
+- `Consent decision: opted-in` → User agreed to help improve Lumi
 - `Consent decision: opted-out` → User declined
 
 ---
@@ -138,7 +139,7 @@ Auto-calculated metrics (if analytics opted in). Updated when features are used.
 
 ## Notes
 
-This file is automatically updated as you use Dex features:
+This file is automatically updated as you use Lumi features:
 - Checkboxes get checked when you use a feature
 - Journey metadata updates based on checked features
-- Run `/dex-level-up` anytime to discover capabilities you haven't explored yet
+- Run `/lumi-level-up` anytime to discover capabilities you haven't explored yet

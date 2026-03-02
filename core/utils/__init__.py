@@ -1,1 +1,1 @@
-"""Dex utility modules"""
+"""Lumi utility modules"""

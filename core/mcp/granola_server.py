@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Granola Meeting Notes MCP Server for Dex
+Granola Meeting Notes MCP Server for Lumi
 
 Primary: Uses Granola's unofficial API for complete data
 Fallback: Reads from local cache if API fails
@@ -680,7 +680,7 @@ def search_meetings(query: str, days_back: int = 30, limit: int = 10) -> List[Di
 
 
 # Initialize the MCP server
-app = Server("dex-granola-mcp")
+app = Server("lumi-granola-mcp")
 
 
 @app.list_tools()
@@ -1046,7 +1046,7 @@ async def handle_call_tool(
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info("Starting Dex Granola MCP Server (API-first with cache fallback)")
+    logger.info("Starting Lumi Granola MCP Server (API-first with cache fallback)")
     logger.info(f"API credentials: {GRANOLA_CREDS}")
     logger.info(f"Cache fallback: {GRANOLA_CACHE}")
     
@@ -1055,7 +1055,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-granola-mcp",
+                server_name="lumi-granola-mcp",
                 server_version="2.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

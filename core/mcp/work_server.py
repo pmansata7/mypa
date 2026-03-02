@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MCP Server for Dex Work Management System
+MCP Server for Lumi Work Management System
 Manages the complete planning hierarchy: quarterly goals → weekly priorities → daily tasks.
 
 Provides deterministic operations through structured tools with:
@@ -2320,7 +2320,7 @@ def generate_scheduling_suggestions(
 # MCP SERVER
 # ============================================================================
 
-app = Server("dex-work-mcp")
+app = Server("lumi-work-mcp")
 
 @app.list_tools()
 async def handle_list_tools() -> list[types.Tool]:
@@ -3746,7 +3746,7 @@ async def handle_call_tool(
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info(f"Starting Dex Work MCP Server")
+    logger.info(f"Starting Lumi Work MCP Server")
     logger.info(f"Vault path: {BASE_DIR}")
     logger.info(f"Tasks file: {get_tasks_file()}")
     logger.info(f"Pillars loaded: {list(PILLARS.keys())}")
@@ -3756,7 +3756,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-work-mcp",
+                server_name="lumi-work-mcp",
                 server_version="3.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

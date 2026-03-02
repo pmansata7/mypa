@@ -3,8 +3,8 @@
 
 set -e
 
-SKILLS_DIR="/Users/dave/Dex/Dex/.claude/skills"
-COMMANDS_DIR="/Users/dave/Dex/Dex/.claude/commands"
+SKILLS_DIR="/Users/dave/Lumi/Lumi/.claude/skills"
+COMMANDS_DIR="/Users/dave/Lumi/Lumi/.claude/commands"
 
 # Create skills directory structure
 mkdir -p "$SKILLS_DIR"
@@ -59,18 +59,18 @@ create_skill "resume-builder.md" "resume-builder" "Build resume and LinkedIn pro
 create_skill "project-health.md" "project-health" "Scan active projects for status, blockers, and next steps" "false"
 create_skill "product-brief.md" "product-brief" "Extract product ideas through questions and generate PRD" "false"
 
-# Dex system improvements
-create_skill "dex-level-up.md" "dex-level-up" "Discover unused Dex features based on usage patterns" "false"
-create_skill "dex-backlog.md" "dex-backlog" "AI-powered ranking of Dex improvement ideas" "false"
-create_skill "dex-improve.md" "dex-improve" "Workshop improvement ideas into implementation plans" "false"
+# Lumi system improvements
+create_skill "lumi-level-up.md" "lumi-level-up" "Discover unused Lumi features based on usage patterns" "false"
+create_skill "lumi-backlog.md" "lumi-backlog" "AI-powered ranking of Lumi improvement ideas" "false"
+create_skill "lumi-improve.md" "lumi-improve" "Workshop improvement ideas into implementation plans" "false"
 
 # System/Utility
 create_skill "demo.md" "demo" "Toggle demo mode on/off, reset demo content, or check status" "true"
 create_skill "setup.md" "setup" "Set up personal knowledge system through guided conversation" "true"
-create_skill "reset.md" "reset" "Re-run onboarding to restructure Dex system" "true"
+create_skill "reset.md" "reset" "Re-run onboarding to restructure Lumi system" "true"
 create_skill "prompt-improver.md" "prompt-improver" "Improve prompts using Anthropic best practices" "false"
 create_skill "save-insight.md" "save-insight" "Capture learnings from completed work for future reference" "false"
-create_skill "create-mcp.md" "create-mcp" "Wizard to create and integrate MCP servers into Dex" "false"
+create_skill "create-mcp.md" "create-mcp" "Wizard to create and integrate MCP servers into Lumi" "false"
 create_skill "whats-new-claude.md" "whats-new-claude" "Check for Claude Code updates and get improvement suggestions" "false"
 
 echo ""

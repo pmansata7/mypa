@@ -1,10 +1,10 @@
 #!/bin/bash
 # Distribution Safety Check
-# Run this before pushing Dex to GitHub to verify no credentials or personal data
+# Run this before pushing Lumi to GitHub to verify no credentials or personal data
 
 set -e
 
-echo "🔍 Dex Distribution Safety Check"
+echo "🔍 Lumi Distribution Safety Check"
 echo "================================="
 echo ""
 

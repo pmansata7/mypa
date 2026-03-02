@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Dex Update Checker MCP Server
+Lumi Update Checker MCP Server
 
-Checks for Dex updates from GitHub and notifies users of new versions.
+Checks for Lumi updates from GitHub and notifies users of new versions.
 """
 
 import os
@@ -13,7 +13,7 @@ from pathlib import Path
 from mcp.server.fastmcp import FastMCP
 
 # Initialize MCP server
-mcp = FastMCP("Dex Update Checker")
+mcp = FastMCP("Lumi Update Checker")
 
 # Constants
 GITHUB_REPO = "davekilleen/dex"
@@ -123,7 +123,7 @@ def compare_versions(current: str, latest: str) -> str:
 @mcp.tool()
 async def check_for_updates(force: bool = False) -> dict:
     """
-    Check if a newer version of Dex is available on GitHub.
+    Check if a newer version of Lumi is available on GitHub.
     
     Args:
         force: If True, check even if checked recently. Default: False

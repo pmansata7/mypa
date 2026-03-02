@@ -5,7 +5,7 @@ description: Activate a beta feature using an activation code
 
 # Beta Feature Activation
 
-Activate early access to new Dex features using an activation code.
+Activate early access to new Lumi features using an activation code.
 
 ## Usage
 
@@ -166,7 +166,7 @@ If `System/user-profile.yaml` doesn't exist:
 ```
 You need to complete onboarding before activating beta features.
 
-Run `/setup` to get started with Dex.
+Run `/setup` to get started with Lumi.
 ```
 
 ---

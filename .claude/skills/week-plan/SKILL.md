@@ -195,7 +195,7 @@ If `05-Areas/Career/` exists, check for stale skills that could be developed thi
 
 ## Step 5: PKM Improvement Check (Optional)
 
-Check `System/Dex_Backlog.md` for high-priority improvement ideas worth tackling this week.
+Check `System/Lumi_Backlog.md` for high-priority improvement ideas worth tackling this week.
 
 ---
 
@@ -370,6 +370,6 @@ After generating the file, provide a summary:
 
 | Integration | MCP Server | Tools Used |
 |-------------|------------|------------|
-| Calendar | dex-calendar-mcp | `calendar_get_events_with_attendees` |
-| Work | dex-work-mcp | `list_tasks`, `get_quarterly_goals`, `get_goal_status`, `create_weekly_priority`, `analyze_calendar_capacity`, `classify_task_effort`, `suggest_task_scheduling`, `get_commitments_due` |
-| Granola | dex-granola-mcp | `get_upcoming_meetings` (optional) |
+| Calendar | lumi-calendar-mcp | `calendar_get_events_with_attendees` |
+| Work | lumi-work-mcp | `list_tasks`, `get_quarterly_goals`, `get_goal_status`, `create_weekly_priority`, `analyze_calendar_capacity`, `classify_task_effort`, `suggest_task_scheduling`, `get_commitments_due` |
+| Granola | lumi-granola-mcp | `get_upcoming_meetings` (optional) |

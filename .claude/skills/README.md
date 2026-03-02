@@ -172,13 +172,13 @@ skill-name/
 
 Invoked with `/skill-name` - automatically discovered by Claude.
 
-## Skill Types in Dex
+## Skill Types in Lumi
 
-Dex includes two categories of skills:
+Lumi includes two categories of skills:
 
-### Dex Skills (PKM-Specific)
+### Lumi Skills (PKM-Specific)
 
-Built specifically for personal knowledge management and productivity workflows in Dex:
+Built specifically for personal knowledge management and productivity workflows in Lumi:
 
 **Getting Started:**
 - `/getting-started` - Interactive post-onboarding tour (adaptive to your setup)
@@ -200,6 +200,9 @@ Built specifically for personal knowledge management and productivity workflows 
 - `/meeting-prep` - Prepare for meetings
 - `/process-meetings` - Process Granola meetings
 
+**Communication:**
+- `/exec-summary` - Craft or refine exec-level communication (Wes Kao frameworks: sales-then-logistics, MOO, signposting, managing up)
+
 **Career Development:**
 - `/career-setup` - Initialize career system
 - `/career-coach` - Career reflections and assessments
@@ -212,13 +215,13 @@ Built specifically for personal knowledge management and productivity workflows 
 
 **System Management:**
 - `/prompt-improver` - Transform vague prompts via Anthropic Messages API
-- `/dex-level-up` - Discover unused features
-- `/dex-backlog` - AI-powered idea ranking
-- `/dex-improve` - Workshop improvement ideas
-- `/dex-whats-new` - Check for system improvements (learnings + Claude updates)
-- `/dex-update` - Update Dex automatically (shows what's new, updates if confirmed, no technical knowledge needed)
-- `/dex-rollback` - Undo last update if something went wrong
-- `/dex-obsidian-setup` - Enable Obsidian integration and migrate vault to wiki links
+- `/lumi-level-up` - Discover unused features
+- `/lumi-backlog` - AI-powered idea ranking
+- `/lumi-improve` - Workshop improvement ideas
+- `/lumi-whats-new` - Check for system improvements (learnings + Claude updates)
+- `/lumi-update` - Update Lumi automatically (shows what's new, updates if confirmed, no technical knowledge needed)
+- `/lumi-rollback` - Undo last update if something went wrong
+- `/lumi-obsidian-setup` - Enable Obsidian integration and migrate vault to wiki links
 - `/integrate-mcp` - Integrate existing MCP servers from Smithery.ai marketplace
 - `/create-mcp` - Create new MCP integrations
 

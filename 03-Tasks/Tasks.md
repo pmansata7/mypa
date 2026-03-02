@@ -1,38 +1,23 @@
-# Tasks
+# Task Backlog
 
-Your task backlog organized by priority.
-
-## This Week
-
-<!-- Tasks promoted to this week's focus -->
-
-## P0 - Urgent (max 3)
-
-<!-- Critical items that must be done today/tomorrow -->
-
-## P1 - Important (max 5)
-
-<!-- Important items for this week -->
-
-## P2 - Normal (max 10)
-
-<!-- Standard priority items -->
-
-## P3 - Backlog
-
-<!-- Lower priority items, someday/maybe -->
+**Last Updated:** 2026-02-12
 
 ---
 
-## Task Format
+## P0 — Critical / Urgent
 
-```
-- [ ] **Task title** — Context or notes #pillar
-- [s] Started task
-- [b] Blocked task (note blocker)
-- [x] Completed task
-```
+*(No tasks yet)*
 
-## Pillars
+## P1 — Important
 
-Tasks should align to your strategic pillars (configured during `/setup`).
+*(No tasks yet)*
+
+## P2 — Normal
+
+*(No tasks yet)*
+
+---
+
+## Completed
+
+*(No tasks yet)*

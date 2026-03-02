@@ -1,6 +1,6 @@
-# Dex Skill Development - Analytics Checklist
+# Lumi Skill Development - Analytics Checklist
 
-**When creating or modifying any Dex skill, MCP tool, or capability, complete this checklist.**
+**When creating or modifying any Lumi skill, MCP tool, or capability, complete this checklist.**
 
 This ensures all new features are tracked for product analytics (if user has opted in).
 
@@ -22,13 +22,13 @@ This ensures all new features are tracked for product analytics (if user has opt
 - What users DID with the feature (only that they used it)
 - Free-form text input
 - PII
-- User customizations or additions (only Dex built-in features)
+- User customizations or additions (only Lumi built-in features)
 
 ---
 
 ## 2. Update Event Strategy
 
-Add your event to `System/PRDs/dex-analytics-events.md`:
+Add your event to `System/PRDs/lumi-analytics-events.md`:
 
 ```markdown
 | `/your-skill` | `your_skill_completed` | `property1`, `property2` | What insight this provides |
@@ -56,7 +56,7 @@ Add a checkbox in the appropriate section of `System/usage_log.md`:
 This enables:
 - Journey metadata calculation
 - Feature adoption tracking
-- `/dex-level-up` feature discovery
+- `/lumi-level-up` feature discovery
 
 ---
 
@@ -89,7 +89,7 @@ mark_feature_used('Feature name')
 
 Before finalizing, verify:
 
-- [ ] **Dex-only** - Only tracking built-in Dex features (not user customizations)
+- [ ] **Lumi-only** - Only tracking built-in Lumi features (not user customizations)
 - [ ] **Usage not content** - Tracking THAT feature was used, not what they did with it
 - [ ] No personal content (names, task titles, meeting content, conversations)
 - [ ] Only categorical or numeric values (counts, categories)
@@ -109,7 +109,7 @@ Before finalizing, verify:
 | Discovery | `feature_first_use` | with `feature_name` property |
 
 **Files to update:**
-1. `System/PRDs/dex-analytics-events.md` - Event definition
+1. `System/PRDs/lumi-analytics-events.md` - Event definition
 2. `System/usage_log.md` - Feature checkbox
 3. Skill SKILL.md or MCP Python file - Event firing code
 
@@ -121,7 +121,7 @@ Before finalizing, verify:
 - Name: `my_workflow_completed`
 - Properties: `items_processed`, `duration_seconds`, `mode`
 
-**2. dex-analytics-events.md entry:**
+**2. lumi-analytics-events.md entry:**
 ```markdown
 | `/my-workflow` | `my_workflow_completed` | `items_processed`, `mode` | Workflow adoption |
 ```
@@ -145,4 +145,4 @@ Mark feature used: "My workflow"
 
 ---
 
-*This checklist ensures Dex can track feature adoption while respecting user privacy.*
+*This checklist ensures Lumi can track feature adoption while respecting user privacy.*

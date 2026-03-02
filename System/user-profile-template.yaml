@@ -59,7 +59,7 @@ communication:
 pillars: []
 
 # Meeting Processing Configuration
-# How Dex processes meetings from Granola
+# How Lumi processes meetings from Granola
 meeting_processing:
   # Mode: "manual" (run /process-meetings) or "automatic" (background sync)
   mode: manual
@@ -129,8 +129,8 @@ integrations:
   pendo_mcp_enabled: false  # Pendo product analytics (OAuth via Cursor MCP)
 
 # Analytics Configuration
-# Controls anonymous feature usage tracking to help Dave improve Dex
-# Only Dex built-in features are tracked, never content or what you do with features
+# Controls anonymous feature usage tracking to help Dave improve Lumi
+# Only Lumi built-in features are tracked, never content or what you do with features
 analytics:
-  # Master switch - set to true if you opted in to help improve Dex
+  # Master switch - set to true if you opted in to help improve Lumi
   enabled: false

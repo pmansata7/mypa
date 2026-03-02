@@ -1,7 +1,7 @@
 /**
- * Dex MCP Bridge Extension for Pi
+ * Lumi MCP Bridge Extension for Pi
  *
- * Bridges Pi to Dex's MCP servers, enabling:
+ * Bridges Pi to Lumi's MCP servers, enabling:
  * - Task management (create, complete, list)
  * - Calendar operations (today's events, upcoming events)
  *
@@ -121,7 +121,7 @@ class McpServerConnection {
       protocolVersion: "2024-11-05",
       capabilities: {},
       clientInfo: {
-        name: "pi-dex-bridge",
+        name: "pi-lumi-bridge",
         version: "1.0.0",
       },
     });
@@ -284,8 +284,8 @@ export default function (pi: ExtensionAPI) {
   // Register the dex_task tool
   pi.registerTool({
     name: "dex_task",
-    label: "Dex Task Management",
-    description: `Manage tasks in Dex knowledge system.
+    label: "Lumi Task Management",
+    description: `Manage tasks in Lumi knowledge system.
 
 Actions:
 - create: Create a new task with title and pillar alignment
@@ -408,8 +408,8 @@ Examples:
   // Register the dex_calendar tool
   pi.registerTool({
     name: "dex_calendar",
-    label: "Dex Calendar",
-    description: `Access Apple Calendar events through Dex.
+    label: "Lumi Calendar",
+    description: `Access Apple Calendar events through Lumi.
 
 Actions:
 - today: Get today's calendar events
@@ -522,10 +522,10 @@ Examples:
   });
 
   // Register convenience commands
-  pi.registerCommand("dex-tasks", {
-    description: "List your current Dex tasks",
+  pi.registerCommand("lumi-tasks", {
+    description: "List your current Lumi tasks",
     handler: async (args, ctx) => {
-      ctx.ui.notify("Fetching tasks from Dex...", "info");
+      ctx.ui.notify("Fetching tasks from Lumi...", "info");
       try {
         const server = await ensureWorkServer();
         const result = await server.callTool("list_tasks", { include_done: false });
@@ -539,7 +539,7 @@ Examples:
     },
   });
 
-  pi.registerCommand("dex-today", {
+  pi.registerCommand("lumi-today", {
     description: "Show today's calendar events",
     handler: async (args, ctx) => {
       ctx.ui.notify("Fetching today's events...", "info");
@@ -578,7 +578,7 @@ Examples:
   });
 
   // Log extension loaded
-  console.log("Dex MCP Bridge extension loaded");
+  console.log("Lumi MCP Bridge extension loaded");
   console.log(`  Vault path: ${vaultPath}`);
   console.log(`  MCP servers: ${mcpDir}`);
 }

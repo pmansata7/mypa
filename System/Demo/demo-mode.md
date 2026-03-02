@@ -1,13 +1,13 @@
 # Demo Mode Reference
 
-Dex includes a demo mode with pre-populated content so you can explore the system before adding your own data.
+Lumi includes a demo mode with pre-populated content so you can explore the system before adding your own data.
 
 ## Toggling Demo Mode
 
-- `/dex-demo on` - Enable demo mode (uses sample data)
-- `/dex-demo off` - Disable demo mode (use your real vault)
-- `/dex-demo status` - Check current mode
-- `/dex-demo reset` - Restore demo content to original state
+- `/lumi-demo on` - Enable demo mode (uses sample data)
+- `/lumi-demo off` - Disable demo mode (use your real vault)
+- `/lumi-demo status` - Check current mode
+- `/lumi-demo reset` - Restore demo content to original state
 
 ## What Demo Mode Provides
 
@@ -56,13 +56,13 @@ Demo mode uses content from `System/Demo/` which includes:
 - Career skill tags on tasks linking daily work to growth
 
 ### System Evolution (Job 8)
-- Dex_Backlog.md with 10 ranked improvement ideas (AI-scored)
+- Lumi_Backlog.md with 10 ranked improvement ideas (AI-scored)
 - usage_log.md tracking feature adoption
 - Ideas folder with unprocessed thoughts for `/triage`
 
 ## When to Use Demo Mode
 
-- **New users:** Explore how Dex works before adding your own content
+- **New users:** Explore how Lumi works before adding your own content
 - **Demoing to colleagues:** Show the PKM system with realistic data
 - **Testing commands:** Experiment without affecting your real vault
 

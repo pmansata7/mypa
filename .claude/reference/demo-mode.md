@@ -1,25 +1,25 @@
 # Demo Mode Reference
 
-Dex includes a demo mode with pre-populated content so you can explore the system before adding your own data.
+Lumi includes a demo mode with pre-populated content so you can explore the system before adding your own data.
 
 ## Toggling Demo Mode
 
-- `/dex-demo on` - Enable demo mode and launch interactive demo selector
-- `/dex-demo off` - Disable demo mode (use your real vault)
-- `/dex-demo menu` - Show demo scenario menu (when demo mode is on)
-- `/dex-demo status` - Check current mode
-- `/dex-demo reset` - Restore demo content to original state
+- `/lumi-demo on` - Enable demo mode and launch interactive demo selector
+- `/lumi-demo off` - Disable demo mode (use your real vault)
+- `/lumi-demo menu` - Show demo scenario menu (when demo mode is on)
+- `/lumi-demo status` - Check current mode
+- `/lumi-demo reset` - Restore demo content to original state
 
 ## Interactive Demo Selector
 
-When you run `/dex-demo on`, you'll see a menu of **12 validated demo scenarios** that showcase different aspects of Dex.
+When you run `/lumi-demo on`, you'll see a menu of **12 validated demo scenarios** that showcase different aspects of Lumi.
 
 **How it works:**
-1. Run `/dex-demo on`
+1. Run `/lumi-demo on`
 2. See Alex Chen persona intro and scenario menu
 3. Enter a number (1-12) to launch that scenario
 4. Follow the guided walkthrough
-5. Return to menu anytime with `/dex-demo menu`
+5. Return to menu anytime with `/lumi-demo menu`
 
 **Scenario categories:**
 - **Daily Workflow (1-4):** Morning journal, daily planning, daily review, inbox triage
@@ -77,13 +77,13 @@ Demo mode uses content from `System/Demo/` which includes:
 - Career skill tags on tasks linking daily work to growth
 
 ### System Evolution (Job 8)
-- Dex_Backlog.md with 10 ranked improvement ideas (AI-scored)
+- Lumi_Backlog.md with 10 ranked improvement ideas (AI-scored)
 - usage_log.md tracking feature adoption
 - Ideas folder with unprocessed thoughts for `/triage`
 
 ## When to Use Demo Mode
 
-- **New users:** Explore how Dex works before adding your own content
+- **New users:** Explore how Lumi works before adding your own content
 - **Demoing to colleagues:** Show the PKM system with realistic data
 - **Testing commands:** Experiment without affecting your real vault
 
@@ -121,7 +121,7 @@ Run through all 12 scenarios in order, spending 3-4 minutes per scenario.
 
 If you make changes in demo mode and want to start fresh:
 ```
-/dex-demo reset
+/lumi-demo reset
 ```
 
 This restores all demo content from `System/Demo/_original/` backup.

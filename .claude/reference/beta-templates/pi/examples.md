@@ -86,7 +86,7 @@ After these iterations, here's the kind of extension Pi creates:
 
 ```typescript
 // .pi/extensions/commitment-extractor.ts
-import { DexBridge } from './dex-mcp-bridge';
+import { LumiBridge } from './lumi-mcp-bridge';
 
 interface Commitment {
   text: string;
@@ -98,7 +98,7 @@ interface Commitment {
 }
 
 export async function extractCommitments(): Promise<void> {
-  const dex = new DexBridge();
+  const lumi = new LumiBridge();
   const commitments: Commitment[] = [];
 
   // Pattern matching for commitment language
@@ -114,10 +114,10 @@ export async function extractCommitments(): Promise<void> {
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - 14);
 
-  const meetingNotes = await dex.getMeetingNotes({ since: cutoffDate });
+  const meetingNotes = await lumi.getMeetingNotes({ since: cutoffDate });
 
   for (const meeting of meetingNotes) {
-    const content = await dex.readFile(meeting.path);
+    const content = await lumi.readFile(meeting.path);
     const attendees = extractAttendees(content);
 
     for (const pattern of commitmentPatterns) {
@@ -139,9 +139,9 @@ export async function extractCommitments(): Promise<void> {
   }
 
   // Also scan Slack exports if present
-  const slackFiles = await dex.glob('00-Inbox/Slack/**/*.md');
+  const slackFiles = await lumi.glob('00-Inbox/Slack/**/*.md');
   for (const slackFile of slackFiles) {
-    const content = await dex.readFile(slackFile);
+    const content = await lumi.readFile(slackFile);
     const fileDate = extractDateFromPath(slackFile);
 
     if (fileDate >= cutoffDate) {
@@ -638,4 +638,4 @@ Created something useful? Share it in the beta channel! Include:
 2. What it does
 3. Any iterations you made
 
-Your best ideas might become built-in Dex features.
+Your best ideas might become built-in Lumi features.

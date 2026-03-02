@@ -1,6 +1,6 @@
 # Demo Scenarios Reference
 
-12 validated scenarios demonstrating Dex capabilities using Alex Chen's demo content.
+12 validated scenarios demonstrating Lumi capabilities using Alex Chen's demo content.
 
 ---
 
@@ -384,13 +384,13 @@ Read: 05-Areas/Career/Evidence/Achievements/2026_Mobile_App_Launch.md
 
 **Commands to run:**
 ```
-/dex-backlog
-/dex-whats-new
+/lumi-backlog
+/lumi-whats-new
 ```
 
 **Commands to show:**
 ```
-Read: System/Dex_Backlog.md
+Read: System/Lumi_Backlog.md
 Read: System/Session_Learnings/2026-01-20.md
 Read: 06-Resources/Learnings/Mistake_Patterns.md
 ```
@@ -406,11 +406,11 @@ Read: 06-Resources/Learnings/Mistake_Patterns.md
 - "Session learnings capture mistakes, preferences, documentation gaps"
 - "Backlog AI ranks ideas on 5 dimensions - effort intentionally excluded"
 - "Pattern recognition turns session learnings into mistake patterns"
-- "`/dex-whats-new` checks for Claude updates and pending learnings"
+- "`/lumi-whats-new` checks for Claude updates and pending learnings"
 - "Capture improvement ideas anytime via Work MCP `capture_idea` tool"
 
 **Demo files to reference:**
-- Backlog: `System/Dex_Backlog.md` (10 ranked ideas)
+- Backlog: `System/Lumi_Backlog.md` (10 ranked ideas)
 - Session learnings: `System/Session_Learnings/2026-01-20.md`
 - Mistake patterns: `06-Resources/Learnings/Mistake_Patterns.md`
 - Working preferences: `06-Resources/Learnings/Working_Preferences.md`
@@ -437,7 +437,7 @@ Run through all 12 scenarios in order, spending 3-4 minutes per scenario.
 
 ## Interactive Menu Workflow
 
-When user runs `/dex-demo on`, the system:
+When user runs `/lumi-demo on`, the system:
 1. Enables demo mode flag in `System/user-profile.yaml`
 2. Displays Alex Chen persona introduction
 3. Presents numbered list of 12 scenarios
@@ -445,4 +445,4 @@ When user runs `/dex-demo on`, the system:
 5. Executes that scenario with guided walkthrough
 6. Offers to return to menu or try another scenario
 
-User can return to menu anytime with `/dex-demo menu`.
+User can return to menu anytime with `/lumi-demo menu`.

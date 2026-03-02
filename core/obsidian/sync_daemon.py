@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bidirectional sync daemon for Obsidian ↔ Dex
+Bidirectional sync daemon for Obsidian ↔ Lumi
 Monitors file changes and syncs task states using Work MCP
 """
 import os
@@ -24,7 +24,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-class DexSyncHandler(FileSystemEventHandler):
+class LumiSyncHandler(FileSystemEventHandler):
     """Handle file changes and sync task states"""
     
     def __init__(self):
@@ -89,11 +89,11 @@ class DexSyncHandler(FileSystemEventHandler):
 
 def start_daemon():
     """Start the sync daemon"""
-    logger.info("Starting Dex Obsidian Sync Daemon")
+    logger.info("Starting Lumi Obsidian Sync Daemon")
     logger.info(f"Watching: {BASE_DIR}")
     logger.info(f"Log file: {LOG_FILE}")
     
-    event_handler = DexSyncHandler()
+    event_handler = LumiSyncHandler()
     observer = Observer()
     observer.schedule(event_handler, str(BASE_DIR), recursive=True)
     observer.start()

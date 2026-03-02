@@ -1,6 +1,6 @@
-# Dex Usage Log
+# Lumi Usage Log
 
-Tracks which features Alex has used to power `/dex-level-up` recommendations.
+Tracks which features Alex has used to power `/lumi-level-up` recommendations.
 
 **Purpose:** Show unused features that might be valuable based on role and usage patterns.
 
@@ -68,9 +68,9 @@ Tracks which features Alex has used to power `/dex-level-up` recommendations.
 
 ## System Evolution
 
-- [x] `/dex-level-up` - Discover unused features
-- [x] `/dex-backlog` - AI-powered idea ranking
-- [ ] `/dex-improve` - Workshop improvement ideas
+- [x] `/lumi-level-up` - Discover unused features
+- [x] `/lumi-backlog` - AI-powered idea ranking
+- [ ] `/lumi-improve` - Workshop improvement ideas
 - [x] Session learnings captured
 - [x] Mistake patterns documented
 - [x] Working preferences documented

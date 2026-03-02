@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Dex Analytics Helper
+Lumi Analytics Helper
 
-Shared utilities for analytics across Dex skills and MCPs.
+Shared utilities for analytics across Lumi skills and MCPs.
 Handles consent checking, journey metadata calculation, and event firing.
 
 Privacy Principles:
-- Only tracks Dex built-in features, not user customizations
+- Only tracks Lumi built-in features, not user customizations
 - Tracks THAT features were used, not WHAT users did with them
 - Never sends content, names, notes, or conversations
 
@@ -32,7 +32,7 @@ except ImportError:
 PENDO_ENDPOINT = "https://app.pendo.io/data/track"
 
 # Bundled Pendo Track Event secret (write-only - can only send events, cannot read data)
-# This enables anonymous feature tracking for Dex users who opt in
+# This enables anonymous feature tracking for Lumi users who opt in
 PENDO_TRACK_SECRET = "9b69df0b-ed13-4fed-925d-265243eef113"
 
 
@@ -193,7 +193,7 @@ def calculate_journey_metadata() -> Dict[str, Any]:
         ],
         'discovery': [
             'Feature discovery', 'What\'s new', 'Backlog review', 
-            'Improvement workshop', 'Idea captured', 'Dex updated', 'Learnings reviewed'
+            'Improvement workshop', 'Idea captured', 'Lumi updated', 'Learnings reviewed'
         ],
         'integrations': [
             'Calendar connected', 'Calendar synced', 'Granola connected',
@@ -262,7 +262,7 @@ def get_visitor_info() -> Dict[str, str]:
     visitor_id = hashlib.sha256(name.encode()).hexdigest()[:16]
     
     # Account ID from email domain or default
-    account_id = profile.get('email_domain', 'dex-users')
+    account_id = profile.get('email_domain', 'lumi-users')
     
     return {
         'visitor_id': visitor_id,

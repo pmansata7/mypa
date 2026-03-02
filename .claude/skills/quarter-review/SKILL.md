@@ -153,11 +153,11 @@ Read `System/pillars.yaml` and assess:
 
 ## Step 5.5: System Health & Backlog Review
 
-Review the Dex system itself and improvement backlog.
+Review the Lumi system itself and improvement backlog.
 
-### Check Dex Backlog
+### Check Lumi Backlog
 
-Read `System/Dex_Backlog.md` if it exists:
+Read `System/Lumi_Backlog.md` if it exists:
 
 **Extract:**
 - Total ideas in backlog
@@ -167,13 +167,13 @@ Read `System/Dex_Backlog.md` if it exists:
 
 **Present to user:**
 
-> "**Dex System Improvement Backlog:**
+> "**Lumi System Improvement Backlog:**
 > 
 > - Total ideas captured: [count]
 > - High-priority (ready to implement): [count]
 > - Implemented this quarter: [count]
 > 
-> Looking at your Dex backlog:
+> Looking at your Lumi backlog:
 > - Any 1-2 high-impact improvements to prioritize next quarter?
 > - Any stale ideas (>6 months old) to archive?"
 
@@ -185,11 +185,11 @@ Wait for user input on:
 
 **If 3+ high-priority ideas exist:**
 
-> "💡 Consider running `/dex-backlog` soon to re-rank ideas based on updated system state."
+> "💡 Consider running `/lumi-backlog` soon to re-rank ideas based on updated system state."
 
-**If no Dex_Backlog.md exists:**
+**If no Lumi_Backlog.md exists:**
 - Skip this section silently
-- In review document, note: "Dex backlog system not yet in use"
+- In review document, note: "Lumi backlog system not yet in use"
 
 ---
 
@@ -297,13 +297,13 @@ reviewed_on: [date]
 - [Self-awareness gained]
 
 ### System Improvements
-- [Dex system improvements identified]
+- [Lumi system improvements identified]
 
 ---
 
 ## System Health & Improvement Backlog
 
-### Dex Backlog Activity
+### Lumi Backlog Activity
 - **Ideas captured:** [Count during quarter]
 - **Ideas implemented:** [Count marked as completed]
 - **Current high-priority ideas:** [Count with score >= 85]
@@ -317,7 +317,7 @@ Based on backlog review, prioritize these improvements:
 1. [Idea to tackle] — [Why now]
 2. [Idea to tackle] — [Why now]
 
-*Run `/dex-backlog` for full ranked list*
+*Run `/lumi-backlog` for full ranked list*
 
 ---
 

@@ -1,6 +1,6 @@
 # MCP Configurations
 
-**Purpose:** Model Context Protocol (MCP) server configurations that connect external tools and data sources to Dex.
+**Purpose:** Model Context Protocol (MCP) server configurations that connect external tools and data sources to Lumi.
 
 ---
 
@@ -61,7 +61,7 @@ Each `.json` file in this folder connects one external system (Calendar, Granola
 - **granola.json** - Meeting transcription and processing
 - **onboarding.json** - Stateful onboarding with validation (session management, dependency checks, vault creation)
 - **resume.json** - Resume builder (stateful resume building, achievement validation, LinkedIn generation)
-- **update-checker.json** - GitHub update detection for `/dex-update` (changelog checking, version comparison)
+- **update-checker.json** - GitHub update detection for `/lumi-update` (changelog checking, version comparison)
 - **work.json** - Task management (create, update, complete tasks)
 
 ## External Integrations
@@ -83,4 +83,4 @@ Use `/create-mcp` skill to:
 - **Reference** (`.claude/reference/mcp-servers.md`) - Technical MCP documentation
 - **Core MCP** (`core/mcp/`) - MCP server implementations
 - **Skills** (`.claude/skills/create-mcp/`) - MCP creation wizard
-- **Integrations** (`06-Resources/Dex_System/Integrations/`) - Integration guides
+- **Integrations** (`06-Resources/Lumi_System/Integrations/`) - Integration guides

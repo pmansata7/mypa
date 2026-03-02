@@ -1,4 +1,4 @@
-# Dex Migration Scripts
+# Lumi Migration Scripts
 
 This folder contains migration scripts for major version updates that require structural changes to user data.
 
@@ -23,14 +23,14 @@ This folder contains migration scripts for major version updates that require st
 
 **Step 1: Check release notes**
 ```
-/dex-whats-new
+/lumi-whats-new
 ```
 
 If you see ⚠️ **BREAKING CHANGES**, read the release notes carefully.
 
 **Step 2: Back up your vault**
 ```bash
-cp -r ~/Documents/dex ~/Documents/dex-backup-$(date +%Y%m%d)
+cp -r ~/Documents/dex ~/Documents/lumi-backup-$(date +%Y%m%d)
 ```
 
 **Step 3: Run the migration script**
@@ -50,7 +50,7 @@ git status
 git diff
 ```
 
-**Step 5: Update Dex**
+**Step 5: Update Lumi**
 ```bash
 git fetch upstream
 git merge upstream/main
@@ -82,7 +82,7 @@ If anything breaks, restore from backup and report the issue.
 set -e  # Exit on error
 
 echo "================================================"
-echo "Dex Migration: v1.x → v2.0.0"
+echo "Lumi Migration: v1.x → v2.0.0"
 echo "Description: [Brief description]"
 echo "================================================"
 echo ""
@@ -125,7 +125,7 @@ echo "================================================"
 echo ""
 echo "Next steps:"
 echo "1. Review changes: git status && git diff"
-echo "2. Update Dex: git fetch upstream && git merge upstream/main"
+echo "2. Update Lumi: git fetch upstream && git merge upstream/main"
 echo "3. Test workflows: /daily-plan, person pages, tasks"
 echo ""
 ```
@@ -186,7 +186,7 @@ If migration fails:
 ```bash
 # Restore from backup
 rm -rf ~/Documents/dex
-cp -r ~/Documents/dex-backup-YYYYMMDD ~/Documents/dex
+cp -r ~/Documents/lumi-backup-YYYYMMDD ~/Documents/dex
 
 # Report issue
 # Open GitHub issue with .migration-log contents

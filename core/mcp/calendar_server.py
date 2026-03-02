@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Apple Calendar MCP Server for Dex
+Apple Calendar MCP Server for Lumi
 
 Provides read/write access to Apple Calendar via AppleScript.
 Works with any calendar synced to Calendar.app, including Google accounts.
@@ -220,7 +220,7 @@ def find_person_page(name: str, email: str) -> Optional[Path]:
 
 
 # Initialize the MCP server
-app = Server("dex-calendar-mcp")
+app = Server("lumi-calendar-mcp")
 
 
 @app.list_tools()
@@ -699,7 +699,7 @@ async def handle_call_tool(
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info("Starting Dex Calendar MCP Server")
+    logger.info("Starting Lumi Calendar MCP Server")
     logger.info("Using Apple Calendar via AppleScript")
     
     async with mcp.server.stdio.stdio_server() as (read_stream, write_stream):
@@ -707,7 +707,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-calendar-mcp",
+                server_name="lumi-calendar-mcp",
                 server_version="1.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

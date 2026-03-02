@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MCP Server for Dex Onboarding System
+MCP Server for Lumi Onboarding System
 
 Provides stateful onboarding with validation, dependency checking, and vault creation.
 Ensures all required fields (especially email_domain) are collected before completion.
@@ -730,9 +730,9 @@ def count_external_companies(meetings: List[Dict], email_domain: str) -> int:
 # MCP SERVER SETUP
 # ============================================================================
 
-app = Server("dex-onboarding-mcp")
+app = Server("lumi-onboarding-mcp")
 
-logger.info("Starting Dex Onboarding MCP Server")
+logger.info("Starting Lumi Onboarding MCP Server")
 logger.info(f"Vault path: {BASE_DIR}")
 
 # ============================================================================
@@ -1263,7 +1263,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-onboarding-mcp",
+                server_name="lumi-onboarding-mcp",
                 server_version="1.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

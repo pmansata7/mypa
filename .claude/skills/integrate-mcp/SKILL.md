@@ -19,7 +19,7 @@ Help users discover and integrate pre-built MCP servers from the ecosystem, prim
 Say:
 
 ```
-**Want to connect more tools to Dex?**
+**Want to connect more tools to Lumi?**
 
 There's a marketplace of 100+ pre-built MCP servers at:
 **[Smithery.ai](https://smithery.ai/servers)**
@@ -39,7 +39,7 @@ These are production-ready integrations for:
    - Fetch the code/documentation
    - Explain what it does
    - Help you configure it
-   - Integrate into Dex
+   - Integrate into Lumi
    - Update documentation
 
 **Or** if you can't find what you need, run `/create-mcp` to build custom.
@@ -113,7 +113,7 @@ Ready to integrate this?
 ```
 "This is an npm package. Here's how to install:
 
-1. Navigate to your Dex directory
+1. Navigate to your Lumi directory
 2. Install the package:
    ```
    npm install -g [package-name]
@@ -159,7 +159,7 @@ Want me to proceed?"
 
 1. Clone the repository:
    ```
-   git clone [repo-url] ~/dex-mcps/[server-name]
+   git clone [repo-url] ~/lumi-mcps/[server-name]
    ```
 
 2. Install dependencies (if any)
@@ -363,4 +363,4 @@ After integration:
 The experience feels like:
 - "That was easier than I expected"
 - "I can do this for any tool I use"
-- "This makes Dex way more powerful"
+- "This makes Lumi way more powerful"

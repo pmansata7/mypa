@@ -1,4 +1,4 @@
-# Dex — Your AI Chief of Staff
+# Lumi — Your AI Chief of Staff
 
 **A personal operating system powered by Claude.**
 
@@ -18,7 +18,7 @@ Product managers, marketers, sales leaders, designers, executives, HR leaders, c
 
 **You don't need to know how to code.** Just follow the setup and talk to your AI assistant.
 
-**If you're an engineer:** Share this with your non-technical colleagues. Distribute Dex across your organization to accelerate AI fluency adoption. When teams build shared understanding of what AI can reliably do (not just chat interfaces, but actual operating systems), you compete far more effectively.
+**If you're an engineer:** Share this with your non-technical colleagues. Distribute Lumi across your organization to accelerate AI fluency adoption. When teams build shared understanding of what AI can reliably do (not just chat interfaces, but actual operating systems), you compete far more effectively.
 
 ---
 
@@ -26,13 +26,13 @@ Product managers, marketers, sales leaders, designers, executives, HR leaders, c
 
 Most people in tech use AI as a chat interface - asking questions, getting answers, starting fresh every time. They've seen the demos but don't understand how to move beyond that. The gap between what's possible and what people actually use continues to widen.
 
-Dex addresses this by giving you a working system immediately. No learning curve, no setup burden.
+Lumi addresses this by giving you a working system immediately. No learning curve, no setup burden.
 
 The system automates cognitive overhead - you reclaim hours in your day. Meeting prep happens automatically. Commitments don't slip. Context is always available before calls. The time you save compounds: less administrative work means more focus on strategic work and career-advancing goals.
 
 The system teaches you as you go. Start shallow, go deep as you get curious. Two weeks of daily practice and you're in flow. By month one, you don't just have a working system - you understand how to build systems.
 
-**For teams and organizations:** One person adopts Dex, sees the value, shares it with colleagues. Technical leaders can distribute the repo (everyone gets the same foundation, adapted to their role) or share demo mode (let people explore without committing their own data). Teams develop common language around what AI can reliably do. Your organization moves from AI demos to AI operations.
+**For teams and organizations:** One person adopts Lumi, sees the value, shares it with colleagues. Technical leaders can distribute the repo (everyone gets the same foundation, adapted to their role) or share demo mode (let people explore without committing their own data). Teams develop common language around what AI can reliably do. Your organization moves from AI demos to AI operations.
 
 **Want to share this?** Point colleagues to the [companion blog post](https://www.linkedin.com/pulse/your-ai-chief-staff-building-personal-operating-system-dave-killeen-yxnqe/) for the full story with more detail and color about how everything comes together. At the bottom of this README, there's a ready-to-use message you can copy and paste to share with your team - makes it easy to accelerate AI fluency adoption across your organization.
 
@@ -136,8 +136,8 @@ python3 --version
 **Can't get this working?** No problem:
 1. Go to [github.com/davekilleen/dex](https://github.com/davekilleen/dex)
 2. Click the green **Code** button → **Download ZIP**
-3. Unzip to your Documents folder (the folder will be named `dex-main`)
-4. In Cursor: **File → Open Folder** → select that `dex-main` folder
+3. Unzip to your Documents folder (the folder will be named `lumi-main`)
+4. In Cursor: **File → Open Folder** → select that `lumi-main` folder
 
 ### Step 2: Run the Installer
 
@@ -149,7 +149,7 @@ Copy and paste this command and press Enter:
 ./install.sh
 ```
 
-**What's happening:** This installs the automation that makes Dex work (task sync, career tracking, meeting intelligence). Takes 1-2 minutes. You'll see text scrolling - that's normal.
+**What's happening:** This installs the automation that makes Lumi work (task sync, career tracking, meeting intelligence). Takes 1-2 minutes. You'll see text scrolling - that's normal.
 
 **When it's done:** You'll see your cursor blinking again, ready for the next command.
 
@@ -166,7 +166,7 @@ pip3 install --user mcp pyyaml
 
 Then restart Cursor.
 
-⚠️ **IMPORTANT: Complete Step 3 now to configure your role - this is what makes Dex work.**
+⚠️ **IMPORTANT: Complete Step 3 now to configure your role - this is what makes Lumi work.**
 
 <details>
 <summary><strong>Troubleshooting: Common Setup Issues</strong></summary>
@@ -287,7 +287,7 @@ Check the MCP server output:
 
 </details>
 
-### Step 3: Tell Dex About Your Role
+### Step 3: Tell Lumi About Your Role
 
 In Cursor, look for a **chat panel** (usually on the right side of the screen). This is Claude - your AI assistant.
 
@@ -372,7 +372,7 @@ If you prefer visual interfaces over command line, use the Desktop app.
 2. Install and open the app
 3. Log in with your Claude Pro or Max account
 4. Click the **Code** tab (top left)
-5. Select your Dex folder to start a session
+5. Select your Lumi folder to start a session
 
 **That's it.** Hooks run automatically - session start context loads, person details inject when mentioned, mistake patterns surface.
 
@@ -436,21 +436,21 @@ This opens your browser. Log in with your Claude Pro or Max account.
 
 **Step 3: Start Claude Code**
 
-From your terminal, navigate to your Dex folder and run `claude`.
+From your terminal, navigate to your Lumi folder and run `claude`.
 
 **Note:** Folder name depends on how you got the code:
 - If you **cloned via Git**: folder is named `dex`
-- If you **downloaded ZIP**: folder is named `dex-main`
+- If you **downloaded ZIP**: folder is named `lumi-main`
 
 **Mac:**
 ```bash
-cd ~/Documents/dex        # or dex-main if you downloaded ZIP
+cd ~/Documents/dex        # or lumi-main if you downloaded ZIP
 claude
 ```
 
 **Windows:**
 ```cmd
-cd %USERPROFILE%\Documents\dex        # or dex-main if you downloaded ZIP
+cd %USERPROFILE%\Documents\dex        # or lumi-main if you downloaded ZIP
 claude
 ```
 
@@ -477,9 +477,9 @@ Eight jobs that happen reliably every day:
 | **Manage Tasks Reliably** | Work MCP syncs tasks with unique IDs across all files. Check off once, updates everywhere. Deduplication prevents doubles. Priority limits stop overcommit. Strategic alignment required. |
 | **Reflect & Improve** | Captures mistakes → rules. Learns preferences. Each session makes the next better. |
 | **Keep Projects Moving** | Auto-detects stalls (12+ days no update). Surfaces blockers. You know what needs attention. |
-| **Evolve Itself** | System suggests improvements based on usage patterns. Monitors Claude Code releases daily - when new capabilities drop, explains what they mean for YOUR system and suggests implementations. Captures your improvement ideas too. AI ranks all by impact. `/dex-improve` plans implementation. System adapts to you. |
+| **Evolve Itself** | System suggests improvements based on usage patterns. Monitors Claude Code releases daily - when new capabilities drop, explains what they mean for YOUR system and suggests implementations. Captures your improvement ideas too. AI ranks all by impact. `/lumi-improve` plans implementation. System adapts to you. |
 
-**Want deeper context?** See [Dex_Jobs_to_Be_Done.md](06-Resources/Dex_System/Dex_Jobs_to_Be_Done.md) for the full framework.
+**Want deeper context?** See [Lumi_Jobs_to_Be_Done.md](06-Resources/Lumi_System/Lumi_Jobs_to_Be_Done.md) for the full framework.
 
 ---
 
@@ -497,7 +497,7 @@ Out of the box, working immediately:
 - **Person & company pages** - Relationship context for individuals + organization-level rollups (contacts, meetings, tasks)
 - **Compound learning** - Captures preferences and mistakes. Every session makes the next one better.
 - **Self-upgrading system** - Checks for new Claude Code features daily. When detected, explains what they mean for YOUR system and suggests implementations. Like having a concierge who reads release notes you'll never read.
-- **Feature discovery** - `/dex-level-up` suggests capabilities you haven't tried yet based on your usage patterns
+- **Feature discovery** - `/lumi-level-up` suggests capabilities you haven't tried yet based on your usage patterns
 
 ## The Journey to Competitive Advantage
 
@@ -517,7 +517,7 @@ Out of the box, working immediately:
 
 Ideas die between having them and recording them. Deciding where things belong kills momentum.
 
-Dex handles this through natural conversation. Just tell Claude things naturally:
+Lumi handles this through natural conversation. Just tell Claude things naturally:
 
 ```
 You: "Sarah seemed worried about timeline but interested in Q2 pilot"
@@ -545,7 +545,7 @@ One decision instead of many. Immediate filing.
 
 Great work happens daily, but evidence disappears. Review time becomes a scramble to remember what you accomplished.
 
-Run `/career-setup` once (job description, career ladder, recent review, growth goals). From that point forward, Dex automatically captures career evidence:
+Run `/career-setup` once (job description, career ladder, recent review, growth goals). From that point forward, Lumi automatically captures career evidence:
 
 | When | What Gets Captured |
 |------|-------------------|
@@ -575,9 +575,9 @@ Your data stays on your laptop. It's yours.
 
 Tasks in multiple places (meeting notes, project files, person pages) don't sync in traditional systems. Check off one, others stay open.
 
-Dex handles this with the **Work MCP server** - a Python-based automation layer that syncs tasks with unique IDs across your entire vault. When you process a meeting, action items get IDs like `^task-20260128-001`. Tasks appear in both the meeting note and `03-Tasks/Tasks.md` with the same ID.
+Lumi handles this with the **Work MCP server** - a Python-based automation layer that syncs tasks with unique IDs across your entire vault. When you process a meeting, action items get IDs like `^task-20260128-001`. Tasks appear in both the meeting note and `03-Tasks/Tasks.md` with the same ID.
 
-Just tell Dex what you finished in natural language:
+Just tell Lumi what you finished in natural language:
 - "I finished following up with John"
 - "Mark the proposal done"  
 - "Completed the API docs"
@@ -617,7 +617,7 @@ flowchart TD
 
 Work backwards from career impact: *What would make you incredibly happy you accomplished three months from now?* Quarterly goals become the north star connecting daily work to career-defining outcomes.
 
-See [Dex_System_Guide.md](06-Resources/Dex_System/Dex_System_Guide.md) for details.
+See [Lumi_System_Guide.md](06-Resources/Lumi_System/Lumi_System_Guide.md) for details.
 
 ---
 
@@ -625,7 +625,7 @@ See [Dex_System_Guide.md](06-Resources/Dex_System/Dex_System_Guide.md) for detai
 
 You're likely using 20% of the system's capabilities because you don't know what you don't know.
 
-Run `/dex-level-up` for progressive disclosure based on your actual usage. The system tracks which features you've used (stored locally in `System/usage_log.md`). When you run the command, it:
+Run `/lumi-level-up` for progressive disclosure based on your actual usage. The system tracks which features you've used (stored locally in `System/usage_log.md`). When you run the command, it:
 
 1. Analyzes your usage patterns - what you're already doing consistently
 2. Identifies natural next steps - features that build on current habits
@@ -642,7 +642,7 @@ The system teaches you progressively. You learn what you need, when you need it.
 
 Want to explore without adding your data? Want to show colleagues what's possible before they commit?
 
-Run `/dex-demo on` for pre-populated sample content that demonstrates **all 8 Jobs to Be Done**:
+Run `/lumi-demo on` for pre-populated sample content that demonstrates **all 8 Jobs to Be Done**:
 
 **What's included:**
 - **Career Development System** - Role definition, career ladder (L4→L5), performance reviews, growth goals, evidence library
@@ -654,13 +654,13 @@ Run `/dex-demo on` for pre-populated sample content that demonstrates **all 8 Jo
 - **System Evolution** - Improvement backlog with 10 AI-ranked ideas, usage tracking, orphaned ideas
 - **People & Relationships** - 5 person pages (internal/external) with meeting history and context
 
-Everything happens in `System/Demo/` - your real vault stays untouched. Run `/dex-demo off` to switch back. Reset demo content anytime with `/dex-demo reset`.
+Everything happens in `System/Demo/` - your real vault stays untouched. Run `/lumi-demo off` to switch back. Reset demo content anytime with `/lumi-demo reset`.
 
 Useful for:
 - Exploring features risk-free before adding real data (see all 8 Jobs in action)
 - Demoing to colleagues - show what AI systems can do beyond chat
 - Driving AI fluency across your team without setup friction
-- Testing new workflows and commands (`/career-coach`, `/dex-backlog`, etc.)
+- Testing new workflows and commands (`/career-coach`, `/lumi-backlog`, etc.)
 
 ---
 
@@ -671,7 +671,7 @@ The system captures learnings and improves over time:
 - Run `/daily-review` - captures learnings to `System/Session_Learnings/`
 - Weekly synthesis (`/week-review`) - turns learnings into system improvements
 - Background automation - checks for new Claude Code features daily
-- Run `/dex-whats-new` - surfaces learnings and new capabilities you can use
+- Run `/lumi-whats-new` - surfaces learnings and new capabilities you can use
 
 What gets captured:
 - Mistake patterns become rules that prevent repetition
@@ -726,11 +726,11 @@ Each session makes the next one better.
 
 Comprehensive guides included in the repo:
 
-- [Dex_System_Guide.md](06-Resources/Dex_System/Dex_System_Guide.md) - Complete feature reference and workflows
-- [Dex_Jobs_to_Be_Done.md](06-Resources/Dex_System/Dex_Jobs_to_Be_Done.md) - Why each piece exists and how they connect
-- [Dex_Technical_Guide.md](06-Resources/Dex_System/Dex_Technical_Guide.md) - Technical deep dive for those who want it
-- [Folder_Structure.md](06-Resources/Dex_System/Folder_Structure.md) - PARA organization explained
-- [Updating_Dex.md](06-Resources/Dex_System/Updating_Dex.md) - How to safely update while preserving customizations
+- [Lumi_System_Guide.md](06-Resources/Lumi_System/Lumi_System_Guide.md) - Complete feature reference and workflows
+- [Lumi_Jobs_to_Be_Done.md](06-Resources/Lumi_System/Lumi_Jobs_to_Be_Done.md) - Why each piece exists and how they connect
+- [Lumi_Technical_Guide.md](06-Resources/Lumi_System/Lumi_Technical_Guide.md) - Technical deep dive for those who want it
+- [Folder_Structure.md](06-Resources/Lumi_System/Folder_Structure.md) - PARA organization explained
+- [Updating_Lumi.md](06-Resources/Lumi_System/Updating_Lumi.md) - How to safely update while preserving customizations
 
 Start with what you need. Go deeper if you're curious. No forced learning paths.
 
@@ -738,25 +738,25 @@ These guides live in your vault after setup.
 
 ---
 
-## Updating Dex
+## Updating Lumi
 
 **Get updates with one command - no technical knowledge needed.**
 
 ### Automatic Notifications
 
-Dex checks for updates every 7 days during `/daily-plan`:
+Lumi checks for updates every 7 days during `/daily-plan`:
 
 ```
-🎁 Dex v1.3.0 is available. Run /dex-update to see what's new and update.
+🎁 Lumi v1.3.0 is available. Run /lumi-update to see what's new and update.
 ```
 
 ### Update in One Command
 
 ```
-/dex-update
+/lumi-update
 ```
 
-**That's it.** Dex shows you what's new, you confirm, and then it handles everything:
+**That's it.** Lumi shows you what's new, you confirm, and then it handles everything:
 - ✓ Downloads latest version
 - ✓ Protects your data (never touches notes/tasks/projects)
 - ✓ Handles conflicts automatically
@@ -770,7 +770,7 @@ Dex checks for updates every 7 days during `/daily-plan`:
 ### If Something Goes Wrong
 
 ```
-/dex-rollback
+/lumi-rollback
 ```
 
 Instantly restores the previous version.
@@ -783,13 +783,13 @@ Updates never touch:
 - Your customizations
 - Your API keys
 
-**For detailed instructions:** See [Updating_Dex.md](06-Resources/Dex_System/Updating_Dex.md)
+**For detailed instructions:** See [Updating_Lumi.md](06-Resources/Lumi_System/Updating_Lumi.md)
 
 ---
 
 ## Obsidian Integration (Optional)
 
-Dex works great with [Obsidian](https://obsidian.md) for visual graph navigation.
+Lumi works great with [Obsidian](https://obsidian.md) for visual graph navigation.
 
 **Why Obsidian?**
 - See your entire knowledge system as connected nodes
@@ -799,7 +799,7 @@ Dex works great with [Obsidian](https://obsidian.md) for visual graph navigation
 **Enable Obsidian mode:**
 
 ```
-/dex-obsidian-setup
+/lumi-obsidian-setup
 ```
 
 **What this does:**
@@ -812,9 +812,9 @@ Dex works great with [Obsidian](https://obsidian.md) for visual graph navigation
 
 **New to Obsidian?** Watch this [beginner's guide (5 min)](https://www.youtube.com/watch?v=gafuqdKwD_U).
 
-Obsidian is completely optional - Dex works perfectly in Cursor/terminal alone. Some users love the graph visualization for navigating their knowledge, others prefer the speed of terminal/Cursor. Both are first-class experiences.
+Obsidian is completely optional - Lumi works perfectly in Cursor/terminal alone. Some users love the graph visualization for navigating their knowledge, others prefer the speed of terminal/Cursor. Both are first-class experiences.
 
-**Learn more:** See [Obsidian_Guide.md](06-Resources/Dex_System/Obsidian_Guide.md)
+**Learn more:** See [Obsidian_Guide.md](06-Resources/Lumi_System/Obsidian_Guide.md)
 
 ---
 

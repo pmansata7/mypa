@@ -1,10 +1,10 @@
 #!/bin/bash
-# Dex PKM - Installation Script
+# Lumi PKM - Installation Script
 # This script sets up your development environment
 
 set -e
 
-echo "🚀 Setting up Dex..."
+echo "🚀 Setting up Lumi..."
 echo ""
 
 # Check for Command Line Tools on macOS (required for git)
@@ -238,7 +238,7 @@ fi
 # Success
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "✅ Dex installation complete!"
+echo "✅ Lumi installation complete!"
 echo ""
 echo "Status:"
 echo "  • Node.js: ✅ Working"
@@ -246,12 +246,12 @@ echo "  • Work MCP: $WORK_MCP_STATUS"
 if [[ "$WORK_MCP_STATUS" == *"Needs"* ]]; then
     echo ""
     echo "⚠️  IMPORTANT: Work MCP enables task sync across all files."
-    echo "   Without it, Dex works but tasks won't sync automatically."
+    echo "   Without it, Lumi works but tasks won't sync automatically."
     echo "   See troubleshooting above to fix."
 fi
 echo ""
 echo "Next steps:"
 echo "  1. In Cursor chat, type: /setup"
 echo "  2. Answer the setup questions (~5 minutes)"
-echo "  3. Start using Dex!"
+echo "  3. Start using Lumi!"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

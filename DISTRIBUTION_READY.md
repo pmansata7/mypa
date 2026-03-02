@@ -1,4 +1,4 @@
-# Dex Distribution Status
+# Lumi Distribution Status
 
 **Date:** 2026-01-29
 **Status:** ✅ **READY for GitHub distribution** (with minor cleanup recommendations)
@@ -53,7 +53,7 @@ This is the **industry-standard solution** used by:
 
 **CLARIFICATION:** You have two different types of MCPs:
 
-#### Dex Core MCPs (7 servers, shipped with the repo)
+#### Lumi Core MCPs (7 servers, shipped with the repo)
 
 | MCP | File | Purpose | Requires |
 |-----|------|---------|----------|
@@ -62,23 +62,23 @@ This is the **industry-standard solution** used by:
 | granola-mcp | `granola_server.py` | Meeting processing | Granola app (optional) |
 | career-mcp | `career_server.py` | Career development | Nothing |
 | resume-mcp | `resume_server.py` | Resume building | Nothing |
-| dex-improvements-mcp | `dex_improvements_server.py` | System improvements | Nothing |
+| lumi-improvements-mcp | `dex_improvements_server.py` | System improvements | Nothing |
 | update-checker | `update_checker.py` | Update checking | GitHub API |
 
 **These are all included** in `core/mcp/` and configured in `System/.mcp.json.example`.
 
-#### External MCPs (NOT part of Dex)
+#### External MCPs (NOT part of Lumi)
 
 These are **separate user-installed tools** via Claude Desktop settings:
 - `cursor-ide-browser` — Browser automation (Cursor-specific)
-- `user-granola` — Official Granola MCP (different from dex granola-mcp)
+- `user-granola` — Official Granola MCP (different from lumi granola-mcp)
 - `user-whatsapp` — WhatsApp integration
 - `user-apify` — Web scraping
 - etc.
 
 **Architecture:**
 ```
-Dex Repository
+Lumi Repository
 ├── core/mcp/                    ← 7 servers (included)
 │   ├── work_server.py
 │   ├── calendar_server.py
@@ -166,7 +166,7 @@ System/pillars.yaml           # User's strategic pillars
 
 ## Git Remote Issue (RESOLVED)
 
-**Problem:** When users cloned the Dex repo, the git remote remained as `origin` pointing to `github.com/davekilleen/Dex`. This caused Claude Desktop to incorrectly identify their local vault as the upstream project instead of an independent local project.
+**Problem:** When users cloned the Lumi repo, the git remote remained as `origin` pointing to `github.com/davekilleen/Lumi`. This caused Claude Desktop to incorrectly identify their local vault as the upstream project instead of an independent local project.
 
 **Symptoms:**
 - Claude Desktop shows "davekilleen/dex" in project selector
@@ -272,7 +272,7 @@ git push origin v1.0.0
 
 I've created three files to help with distribution:
 
-### 1. `/06-Resources/Dex_System/Distribution_Checklist.md`
+### 1. `/06-Resources/Lumi_System/Distribution_Checklist.md`
 
 Comprehensive distribution guide covering:
 - Path configuration (how the template pattern works)
@@ -310,18 +310,18 @@ Before announcing publicly:
 
 ```bash
 # On a different computer or VM
-git clone https://github.com/yourusername/dex.git ~/Desktop/dex-test
-cd ~/Desktop/dex-test
+git clone https://github.com/yourusername/dex.git ~/Desktop/lumi-test
+cd ~/Desktop/lumi-test
 ./install.sh
 # ✅ Should complete without errors
-# ✅ .mcp.json should have correct paths (/Users/testuser/Desktop/dex-test)
+# ✅ .mcp.json should have correct paths (/Users/testuser/Desktop/lumi-test)
 ```
 
 ### Test 2: Setup Wizard
 
 ```bash
 # Open in Cursor
-cursor ~/Desktop/dex-test
+cursor ~/Desktop/lumi-test
 
 # In Cursor chat, run:
 /setup
@@ -448,4 +448,4 @@ I need to "Review Q2 roadmap" by Friday
 
 **Status:** ✅ **Ready to distribute**
 
-See `/06-Resources/Dex_System/Distribution_Checklist.md` for complete details.
+See `/06-Resources/Lumi_System/Distribution_Checklist.md` for complete details.

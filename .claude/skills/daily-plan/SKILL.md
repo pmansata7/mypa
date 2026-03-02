@@ -360,6 +360,6 @@ The plan works at multiple levels:
 
 | Integration | MCP Server | Tools Used |
 |-------------|------------|------------|
-| Calendar | dex-calendar-mcp | `calendar_get_today`, `calendar_get_events_with_attendees` |
-| Granola | dex-granola-mcp | `get_recent_meetings` |
-| Work | dex-work-mcp | `list_tasks`, `get_week_progress`, `get_meeting_context`, `get_commitments_due`, `analyze_calendar_capacity`, `suggest_task_scheduling` |
+| Calendar | lumi-calendar-mcp | `calendar_get_today`, `calendar_get_events_with_attendees` |
+| Granola | lumi-granola-mcp | `get_recent_meetings` |
+| Work | lumi-work-mcp | `list_tasks`, `get_week_progress`, `get_meeting_context`, `get_commitments_due`, `analyze_calendar_capacity`, `suggest_task_scheduling` |

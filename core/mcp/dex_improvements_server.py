@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-MCP Server for Dex Improvements Backlog System
+MCP Server for Lumi Improvements Backlog System
 
-Provides tools for capturing and managing Dex system improvement ideas with:
+Provides tools for capturing and managing Lumi system improvement ideas with:
 - Quick capture from any context
 - Idea storage with metadata
 - List and filter capabilities
@@ -37,7 +37,7 @@ class DateTimeEncoder(json.JSONEncoder):
 
 # Configuration - Vault paths
 BASE_DIR = Path(os.environ.get('VAULT_PATH', Path.cwd()))
-BACKLOG_FILE = BASE_DIR / 'System' / 'Dex_Backlog.md'
+BACKLOG_FILE = BASE_DIR / 'System' / 'Lumi_Backlog.md'
 SYSTEM_DIR = BASE_DIR / 'System'
 
 # Valid categories for ideas
@@ -105,7 +105,7 @@ def find_similar_ideas(title: str, description: str) -> List[Dict[str, Any]]:
     return similar[:3]
 
 def parse_backlog_file() -> List[Dict[str, Any]]:
-    """Parse the Dex backlog file and extract all ideas"""
+    """Parse the Lumi backlog file and extract all ideas"""
     if not BACKLOG_FILE.exists():
         return []
     
@@ -155,22 +155,22 @@ def parse_backlog_file() -> List[Dict[str, Any]]:
     return ideas
 
 def initialize_backlog_file():
-    """Create the Dex backlog file with initial structure"""
+    """Create the Lumi backlog file with initial structure"""
     SYSTEM_DIR.mkdir(parents=True, exist_ok=True)
     
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M')
     
-    content = f"""# Dex System Improvement Backlog
+    content = f"""# Lumi System Improvement Backlog
 
 *Last ranked: {timestamp}*
 
-Welcome to your Dex system improvement backlog! This file tracks ideas for making Dex better.
+Welcome to your Lumi system improvement backlog! This file tracks ideas for making Lumi better.
 
 ## How It Works
 
 1. **Capture ideas** anytime using the `capture_idea` MCP tool
-2. **Review regularly** with `/dex-backlog` to see AI-ranked priorities
-3. **Workshop ideas** by running `/dex-improve [idea title]`
+2. **Review regularly** with `/lumi-backlog` to see AI-ranked priorities
+3. **Workshop ideas** by running `/lumi-improve [idea title]`
 4. **Mark implemented** when you build an idea
 
 Ideas are automatically ranked on 5 dimensions:
@@ -186,7 +186,7 @@ Ideas are automatically ranked on 5 dimensions:
 
 ## Priority Queue
 
-<!-- Auto-ranked by /dex-backlog command -->
+<!-- Auto-ranked by /lumi-backlog command -->
 
 ### 🔥 High Priority (Score: 85+)
 
@@ -208,14 +208,14 @@ Ideas are automatically ranked on 5 dimensions:
 
 ---
 
-*Run `/dex-backlog` to rank your ideas based on current system state.*
+*Run `/lumi-backlog` to rank your ideas based on current system state.*
 """
     
     BACKLOG_FILE.write_text(content)
-    logger.info(f"Created Dex backlog file at {BACKLOG_FILE}")
+    logger.info(f"Created Lumi backlog file at {BACKLOG_FILE}")
 
 def add_idea_to_backlog(idea_id: str, title: str, description: str, category: str) -> bool:
-    """Add a new idea to the Dex backlog file"""
+    """Add a new idea to the Lumi backlog file"""
     if not BACKLOG_FILE.exists():
         initialize_backlog_file()
     
@@ -225,7 +225,7 @@ def add_idea_to_backlog(idea_id: str, title: str, description: str, category: st
     captured_date = datetime.now().strftime('%Y-%m-%d')
     
     idea_entry = f"""- **[{idea_id}]** {title}
-  - **Score:** 0 (not yet ranked - run `/dex-backlog` to calculate)
+  - **Score:** 0 (not yet ranked - run `/lumi-backlog` to calculate)
   - **Category:** {category}
   - **Captured:** {captured_date}
   - **Description:** {description}
@@ -259,7 +259,7 @@ def mark_idea_implemented(idea_id: str, implementation_date: Optional[str] = Non
     if not BACKLOG_FILE.exists():
         return {
             'success': False,
-            'error': 'Dex backlog file does not exist'
+            'error': 'Lumi backlog file does not exist'
         }
     
     content = BACKLOG_FILE.read_text()
@@ -322,7 +322,7 @@ def mark_idea_implemented(idea_id: str, implementation_date: Optional[str] = Non
 # MCP SERVER
 # ============================================================================
 
-app = Server("dex-improvements-mcp")
+app = Server("lumi-improvements-mcp")
 
 @app.list_tools()
 async def handle_list_tools() -> list[types.Tool]:
@@ -330,7 +330,7 @@ async def handle_list_tools() -> list[types.Tool]:
     return [
         types.Tool(
             name="capture_idea",
-            description="Capture a new Dex system improvement idea. Always available for quick capture from any context.",
+            description="Capture a new Lumi system improvement idea. Always available for quick capture from any context.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -458,7 +458,7 @@ async def handle_call_tool(
                 }, indent=2)
             )]
         
-        # Generate ID and add to Dex backlog
+        # Generate ID and add to Lumi backlog
         idea_id = generate_idea_id()
         success = add_idea_to_backlog(idea_id, title, description, category)
         
@@ -468,17 +468,17 @@ async def handle_call_tool(
                 "idea_id": idea_id,
                 "title": title,
                 "category": category,
-                "message": f"Idea captured successfully! Run `/dex-backlog` to see it ranked against other ideas.",
+                "message": f"Idea captured successfully! Run `/lumi-backlog` to see it ranked against other ideas.",
                 "next_steps": [
-                    "Run `/dex-backlog` to see AI-powered ranking",
-                    "Run `/dex-improve \"{title}\"` to workshop this idea",
-                    "Check `System/Dex_Backlog.md` to see all your ideas"
+                    "Run `/lumi-backlog` to see AI-powered ranking",
+                    "Run `/lumi-improve \"{title}\"` to workshop this idea",
+                    "Check `System/Lumi_Backlog.md` to see all your ideas"
                 ]
             }
         else:
             result = {
                 "success": False,
-                "error": "Failed to add idea to Dex backlog"
+                "error": "Failed to add idea to Lumi backlog"
             }
         
         return [types.TextContent(type="text", text=json.dumps(result, indent=2, cls=DateTimeEncoder))]
@@ -507,7 +507,7 @@ async def handle_call_tool(
             "ideas": ideas,
             "count": len(ideas),
             "filters_applied": arguments or {},
-            "note": "Scores are calculated by `/dex-backlog`. Run it to get AI-powered rankings."
+            "note": "Scores are calculated by `/lumi-backlog`. Run it to get AI-powered rankings."
         }
         
         return [types.TextContent(type="text", text=json.dumps(result, indent=2, cls=DateTimeEncoder))]
@@ -565,7 +565,7 @@ async def handle_call_tool(
                 "medium (60-84)": medium_priority,
                 "low (<60)": low_priority
             },
-            "note": "Run `/dex-backlog` to update scores based on current system state"
+            "note": "Run `/lumi-backlog` to update scores based on current system state"
         }
         
         return [types.TextContent(type="text", text=json.dumps(result, indent=2, cls=DateTimeEncoder))]
@@ -575,7 +575,7 @@ async def handle_call_tool(
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info(f"Starting Dex Improvements MCP Server")
+    logger.info(f"Starting Lumi Improvements MCP Server")
     logger.info(f"Vault path: {BASE_DIR}")
     logger.info(f"Backlog file: {BACKLOG_FILE}")
     
@@ -584,7 +584,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-improvements-mcp",
+                server_name="lumi-improvements-mcp",
                 server_version="1.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

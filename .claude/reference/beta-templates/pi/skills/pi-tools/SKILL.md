@@ -1,11 +1,11 @@
 ---
 name: pi-tools
-description: View and manage Pi-built extensions synced to Dex. Shows available tools, commands, and sync status.
+description: View and manage Pi-built extensions synced to Lumi. Shows available tools, commands, and sync status.
 ---
 
 # Pi Tools
 
-View and manage Pi-built extensions that have been synced to Dex.
+View and manage Pi-built extensions that have been synced to Lumi.
 
 ## Arguments
 
@@ -94,21 +94,21 @@ Display full details:
 ### List View
 
 ```
-## Pi Extensions Synced to Dex
+## Pi Extensions Synced to Lumi
 
 **Last sync:** 2026-02-03T12:00:00Z
 
-### dex-mcp-bridge
+### lumi-mcp-bridge
 
-*Bridges Pi to Dex's MCP servers for task and calendar management*
+*Bridges Pi to Lumi's MCP servers for task and calendar management*
 
 **Tools:**
 - `dex_task` - Manage tasks (create, complete, list, suggest)
 - `dex_calendar` - Access calendar events (today, upcoming, list)
 
 **Commands:**
-- `/dex-tasks` - List current tasks
-- `/dex-today` - Show today's events
+- `/lumi-tasks` - List current tasks
+- `/lumi-today` - Show today's events
 
 ---
 
@@ -154,24 +154,24 @@ Run `/pi-tools sync` to refresh from .pi/extensions/
 
 ### Skill Naming
 
-Pi extension skills are prefixed with `pi:` to distinguish from native Dex skills:
-- `pi:dex-mcp-bridge` - MCP bridge extension
+Pi extension skills are prefixed with `pi:` to distinguish from native Lumi skills:
+- `pi:lumi-mcp-bridge` - MCP bridge extension
 - `pi:custom-tool` - Custom extension
 
 Generated skill folders use `pi-` prefix:
-- `.claude/skills/pi-generated/pi-dex-mcp-bridge/SKILL.md`
+- `.claude/skills/pi-generated/pi-lumi-mcp-bridge/SKILL.md`
 
-### When to Use Pi vs Dex
+### When to Use Pi vs Lumi
 
 **Use Pi tools when:**
 - Working in the Pi environment
 - Need direct tool execution
 - Building new extensions
 
-**Use Dex context when:**
+**Use Lumi context when:**
 - Planning work that involves Pi capabilities
 - Documenting what tools are available
-- Cross-referencing with Dex knowledge
+- Cross-referencing with Lumi knowledge
 
 ---
 

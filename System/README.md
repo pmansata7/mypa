@@ -1,15 +1,15 @@
 # System
 
-Configuration and system files for Dex.
+Configuration and system files for Lumi.
 
 ## Key Files
 
 - **pillars.yaml** — Your strategic pillars (main focus areas)
 - **user-profile.yaml** — User preferences and settings (created during onboarding)
 - **user-profile-template.yaml** — Template for user profile structure
-- **Dex_Backlog.md** — AI-ranked improvement backlog for Dex itself
-- **usage_log.md** — Feature adoption tracking (used by `/dex-level-up`)
-- **Dex_Ideas.md** — Raw improvement ideas before ranking
+- **Lumi_Backlog.md** — AI-ranked improvement backlog for Lumi itself
+- **usage_log.md** — Feature adoption tracking (used by `/lumi-level-up`)
+- **Lumi_Ideas.md** — Raw improvement ideas before ranking
 - **.mcp.json.example** — Example MCP server configuration
 - **.last-learning-check** — Timestamp for learning review prompts
 - **claude-code-state.json** — Tracks Anthropic changelog checks
@@ -25,10 +25,10 @@ Configuration and system files for Dex.
 **You should modify:**
 - `pillars.yaml` — Update your strategic focus areas as they evolve
 - `user-profile.yaml` — Adjust preferences and settings
-- `Dex_Backlog.md` — Mark ideas as implemented, add notes
+- `Lumi_Backlog.md` — Mark ideas as implemented, add notes
 
 **Don't modify:**
-- Demo/ — Managed by `/dex-demo` command
+- Demo/ — Managed by `/lumi-demo` command
 - usage_log.md — Auto-updated by system
 - .last-learning-check — Auto-updated by learning prompt system
 - claude-code-state.json — Auto-updated by changelog monitoring
@@ -43,7 +43,7 @@ Your strategic pillars define your main focus areas. Everything ladders up to pi
 - Daily work supports weekly priorities
 - Tasks are tagged with pillar associations
 
-To update pillars, just ask Dex: "Update my pillars" or edit `pillars.yaml` directly.
+To update pillars, just ask Lumi: "Update my pillars" or edit `pillars.yaml` directly.
 
 ### User Profile
 
@@ -55,7 +55,7 @@ Stores preferences like:
 - Journaling preferences
 - Role-specific settings
 
-These preferences shape how Dex communicates and what features are enabled.
+These preferences shape how Lumi communicates and what features are enabled.
 
 ## Onboarding
 
@@ -65,4 +65,4 @@ After onboarding, run `/getting-started` for an interactive tour of available fe
 
 ## Usage
 
-Most of the time you won't interact with System/ directly — Dex manages it. But when you want to adjust strategic direction or preferences, the key files are here.
+Most of the time you won't interact with System/ directly — Lumi manages it. But when you want to adjust strategic direction or preferences, the key files are here.

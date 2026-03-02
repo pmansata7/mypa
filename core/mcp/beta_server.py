@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-MCP Server for Dex Beta Features System
+MCP Server for Lumi Beta Features System
 
 Provides tools for:
 - Beta code validation and activation
@@ -99,9 +99,9 @@ def setup_pi_integration() -> bool:
             shutil.copy(agents_template, agents_dest)
         elif not agents_dest.exists():
             # Create minimal AGENTS.md if no template
-            agents_dest.write_text("""# Dex Context for Pi
+            agents_dest.write_text("""# Lumi Context for Pi
 
-You are working in a Dex vault - a personal knowledge management system.
+You are working in a Lumi vault - a personal knowledge management system.
 
 ## Key Paths
 - Tasks: 03-Tasks/Tasks.md
@@ -110,13 +110,13 @@ You are working in a Dex vault - a personal knowledge management system.
 - Inbox: 00-Inbox/
 
 ## Important
-- Use the dex-mcp-bridge extension for task and calendar operations
+- Use the lumi-mcp-bridge extension for task and calendar operations
 - Preserve existing file formats and conventions
 """)
 
         # Copy MCP bridge extension if template exists
-        bridge_template = BETA_TEMPLATES_DIR / 'pi' / 'dex-mcp-bridge.ts'
-        bridge_dest = pi_dir / 'extensions' / 'dex-mcp-bridge.ts'
+        bridge_template = BETA_TEMPLATES_DIR / 'pi' / 'lumi-mcp-bridge.ts'
+        bridge_dest = pi_dir / 'extensions' / 'lumi-mcp-bridge.ts'
         if bridge_template.exists() and not bridge_dest.exists():
             import shutil
             shutil.copy(bridge_template, bridge_dest)
@@ -298,7 +298,7 @@ def get_feature_instructions(feature_key: str) -> Optional[str]:
 # MCP SERVER
 # ============================================================================
 
-app = Server("dex-beta-mcp")
+app = Server("lumi-beta-mcp")
 
 
 @app.list_tools()
@@ -659,7 +659,7 @@ async def handle_call_tool(
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info("Starting Dex Beta Features MCP Server")
+    logger.info("Starting Lumi Beta Features MCP Server")
     logger.info(f"Vault path: {BASE_DIR}")
     logger.info(f"Beta features file: {BETA_FEATURES_FILE}")
 
@@ -668,7 +668,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-beta-mcp",
+                server_name="lumi-beta-mcp",
                 server_version="1.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

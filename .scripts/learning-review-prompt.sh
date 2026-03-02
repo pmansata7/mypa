@@ -2,7 +2,7 @@
 # Learning Review Prompt - Background self-learning automation
 #
 # Checks for accumulated session learnings and creates a reminder
-# to review them via /dex-whats-new --learnings
+# to review them via /lumi-whats-new --learnings
 #
 # Designed to run daily at 5pm via macOS Launch Agent
 # Creates a prompt file that session-start.sh will detect
@@ -78,12 +78,12 @@ if [[ $PENDING_COUNT -ge 5 ]]; then
 
 You have accumulated learnings from recent sessions that haven't been reviewed yet.
 
-Run \`/dex-whats-new --learnings\` to:
+Run \`/lumi-whats-new --learnings\` to:
 - Review patterns identified from your usage
 - See suggested system improvements
 - Mark learnings as implemented or archived
 
-This helps Dex evolve based on your actual workflow patterns.
+This helps Lumi evolve based on your actual workflow patterns.
 
 ---
 

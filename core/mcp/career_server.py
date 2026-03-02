@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Career Development MCP Server for Dex
+Career Development MCP Server for Lumi
 
 Provides tools for career evidence aggregation, ladder parsing,
 competency coverage analysis, and progress tracking.
@@ -56,7 +56,7 @@ EVIDENCE_DIR = BASE_DIR / 'Resources' / 'Career_Evidence'
 LADDER_FILE = CAREER_DIR / 'Career_Ladder.md'
 
 # Initialize the MCP server
-app = Server("dex-career-mcp")
+app = Server("lumi-career-mcp")
 
 
 # ============================================================================
@@ -1086,7 +1086,7 @@ async def handle_promotion_readiness_score(arguments: dict) -> list[types.TextCo
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info("Starting Dex Career MCP Server")
+    logger.info("Starting Lumi Career MCP Server")
     logger.info(f"Vault path: {BASE_DIR}")
     logger.info(f"Career directory: {CAREER_DIR}")
     logger.info(f"Evidence directory: {EVIDENCE_DIR}")
@@ -1096,7 +1096,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-career-mcp",
+                server_name="lumi-career-mcp",
                 server_version="1.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

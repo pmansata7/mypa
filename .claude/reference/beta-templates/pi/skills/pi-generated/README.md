@@ -31,10 +31,10 @@ pi-generated/
 ## Skill Naming Convention
 
 Pi extension skills use the `pi:` prefix:
-- `pi:dex-mcp-bridge` - MCP bridge extension
+- `pi:lumi-mcp-bridge` - MCP bridge extension
 - `pi:custom-tool` - Custom extension
 
-This distinguishes them from native Dex skills.
+This distinguishes them from native Lumi skills.
 
 ## Related
 

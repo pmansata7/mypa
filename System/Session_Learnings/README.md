@@ -4,7 +4,7 @@ System improvements discovered during work sessions.
 
 ## What Goes Here
 
-Meta-feedback about Dex itself, captured during `/review`:
+Meta-feedback about Lumi itself, captured during `/review`:
 
 - **Mistakes or corrections** — Things that went wrong and how to fix them
 - **Preferences mentioned** — Workflow preferences you shared
@@ -26,21 +26,21 @@ Each learning includes:
 ## Workflow
 
 1. **Capture** — Happens automatically during `/review` (daily review)
-2. **Review** — Periodically check pending learnings via `/dex-whats-new`
+2. **Review** — Periodically check pending learnings via `/lumi-whats-new`
 3. **Implement** — Fix documentation gaps or system issues
 4. **Update status** — Mark as implemented when done
 
-## vs. Dex Backlog
+## vs. Lumi Backlog
 
 **Session Learnings** = specific bugs or doc gaps discovered  
-**Dex Backlog** = feature ideas and improvements (in `System/Dex_Backlog.md`)
+**Lumi Backlog** = feature ideas and improvements (in `System/Lumi_Backlog.md`)
 
 Both feed into system improvements, but learnings are reactive (fixing issues) while the backlog is proactive (new capabilities).
 
 ## Integration
 
-- `/dex-whats-new` checks for pending learnings
+- `/lumi-whats-new` checks for pending learnings
 - Weekly reviews surface unaddressed learnings
-- Helps Dex evolve based on actual usage patterns
+- Helps Lumi evolve based on actual usage patterns
 
-This enables Dex to learn from your usage and improve over time.
+This enables Lumi to learn from your usage and improve over time.

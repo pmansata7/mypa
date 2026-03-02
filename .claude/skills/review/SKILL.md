@@ -122,7 +122,7 @@ Before asking the user anything, reflect on today's session and automatically ex
 
 **This ensures learnings persist for:**
 - Weekly synthesis (`/week`)
-- System improvement reviews (`/dex-whats-new`)
+- System improvement reviews (`/lumi-whats-new`)
 - Future reference
 
 ## Step 4b: Additional Insights

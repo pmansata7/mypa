@@ -1,14 +1,14 @@
 ---
 name: reset
-description: Restructure Dex system based on new role or preferences
+description: Restructure Lumi system based on new role or preferences
 disable-model-invocation: true
 ---
 
 ## Purpose
 
-Re-run the onboarding flow to restructure your Dex system. Useful when:
+Re-run the onboarding flow to restructure your Lumi system. Useful when:
 - Your role changes (promotion, new job, pivot)
-- You want to reorganize after using Dex for a while
+- You want to reorganize after using Lumi for a while
 - You're experimenting with different structures
 - Your company size tier changes (startup → scaling, etc.)
 
@@ -18,7 +18,7 @@ When the user types `/reset`, execute the following:
 
 ### Step 1: Acknowledge and Explain
 
-Say: "Let's reset your Dex setup. I'll walk you through the same questions as initial setup, then reorganize your structure. **Your existing content will be preserved** - I'll move files to match the new structure, not delete them."
+Say: "Let's reset your Lumi setup. I'll walk you through the same questions as initial setup, then reorganize your structure. **Your existing content will be preserved** - I'll move files to match the new structure, not delete them."
 
 ### Step 2: Current State Check
 

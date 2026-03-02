@@ -74,7 +74,7 @@ Say: "Hold on... analyzing your calendar and meetings. 🔍"
 
 Want to see? [Show excerpt from 02-Week_Priorities/Week_Priorities.md]
 
-**This is what Dex does** - turns your calendar chaos into structure automatically.
+**This is what Lumi does** - turns your calendar chaos into structure automatically.
 
 Now, want me to:
 1. Process those [N] Granola meetings (extract action items)?
@@ -166,7 +166,7 @@ I just analyzed your data:
 
 Want to see what I built? [Show excerpt from weekly plan]
 
-**This is what Dex does - it works while you're not looking.**
+**This is what Lumi does - it works while you're not looking.**
 
 Now, want me to process those [N] Granola meetings to extract action items and context?
 ```
@@ -681,9 +681,9 @@ else:
 "Got it! I just read [Tool]'s API. Here's what we can build:
 
 **Possible integrations:**
-• [Capability 1] - [Dex use case]
-• [Capability 2] - [Dex use case]
-• [Capability 3] - [Dex use case]
+• [Capability 1] - [Lumi use case]
+• [Capability 2] - [Lumi use case]
+• [Capability 3] - [Lumi use case]
 
 Based on your role ([role]), I'd focus on [specific capabilities].
 
@@ -711,7 +711,7 @@ See? Real data, not AI guessing. That's what MCP does."
 
 **Step 5: Offer More**
 ```
-"Want to connect another tool? Or explore what else Dex can do?"
+"Want to connect another tool? Or explore what else Lumi can do?"
 
 [If yes, repeat]
 [If no, show quick reference guide]
@@ -731,7 +731,7 @@ If user wants to connect Gmail/Calendar:
 This works even if your work account has restrictions - we can use your personal Google if needed.
 
 **What we'll set up:**
-• Calendar sync (see meetings in Dex)
+• Calendar sync (see meetings in Lumi)
 • Gmail access (summarize newsletters, find emails)
 • Optional: Create daily digest
 
@@ -852,7 +852,7 @@ After any pathway completes:
 • Tell me about meetings - I'll extract action items
 
 **Discovery:**
-• `/dex-level-up` - Find features you haven't tried
+• `/lumi-level-up` - Find features you haven't tried
 • `/integrate-mcp` - Add more tools anytime
 • Smithery.ai - Browse MCP marketplace
 
@@ -908,7 +908,7 @@ At EVERY major decision point:
 - "Want to explore on your own first? That's cool"
 
 After full tour:
-- "Remember - invoke `/dex-level-up` to discover more"
+- "Remember - invoke `/lumi-level-up` to discover more"
 - "Or `/integrate-mcp` to add tools as you need them"
 - "The system grows with you"
 

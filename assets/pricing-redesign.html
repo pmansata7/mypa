@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plans & pricing — Creative professionals</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #181818;
+      --surface-elevated: #222;
+      --text: #f5f5f4;
+      --text-muted: #a8a29e;
+      --accent: #e11d48;
+      --accent-soft: rgba(225, 29, 72, 0.12);
+      --border: rgba(255,255,255,0.08);
+      --best-value-border: #e11d48;
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* Subtle grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 0;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--text-muted);
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 56px 0 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    .hero .highlight {
+      color: var(--accent);
+      font-style: italic;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 520px;
+      margin: 16px auto 0;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 32px;
+      padding: 4px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .tabs button {
+      padding: 10px 20px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    .tabs button:hover {
+      color: var(--text);
+    }
+
+    .tabs button.active {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    /* Cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s;
+      animation: cardReveal 0.6s ease backwards;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.15s; }
+    .card:nth-child(3) { animation-delay: 0.25s; }
+
+    @keyframes cardReveal {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card:hover {
+      border-color: rgba(255,255,255,0.15);
+      box-shadow: 0 24px 48px -12px rgba(0,0,0,0.5);
+    }
+
+    .card.featured {
+      background: var(--surface-elevated);
+      border-color: var(--best-value-border);
+      box-shadow: 0 0 0 1px var(--best-value-border), 0 24px 48px -12px rgba(225, 29, 72, 0.15);
+      transform: scale(1.02);
+    }
+
+    .card.featured:hover {
+      box-shadow: 0 0 0 1px var(--best-value-border), 0 32px 64px -16px rgba(225, 29, 72, 0.2);
+    }
+
+    .badge {
+      position: absolute;
+      top: -1px;
+      right: 24px;
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .card-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-title .icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-soft);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    .card-title h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    .price {
+      margin-bottom: 8px;
+    }
+
+    .price .amount {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .price .cycle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-grow: 0;
+      min-height: 3.6em;
+    }
+
+    .btn-select {
+      width: 100%;
+      padding: 14px 24px;
+      border: none;
+      border-radius: var(--radius);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      margin-bottom: 24px;
+    }
+
+    .card:not(.featured) .btn-select {
+      background: rgba(255,255,255,0.1);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .card:not(.featured) .btn-select:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .card.featured .btn-select {
+      background: var(--accent);
+      color: white;
+    }
+
+    .card.featured .btn-select:hover {
+      background: #c4183d;
+      transform: translateY(-1px);
+    }
+
+    .features {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+    }
+
+    .features h3 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .features ul {
+      list-style: none;
+    }
+
+    .features li {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.7;
+    }
+
+    .card.featured .features li::before {
+      background: var(--accent);
+      opacity: 1;
+    }
+
+    /* Footer link */
+    .see-all {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .see-all a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .see-all a:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .card.featured {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <span class="logo">Creative Suite</span>
+      <nav>
+        <a href="#">Products</a>
+        <a href="#">Solutions</a>
+        <a href="#">Learn & support</a>
+        <a href="#">Plans</a>
+        <button class="btn-ghost">Sign in</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Plans and pricing</h1>
+      <span class="highlight">for creative professionals</span>
+      <p>Do it all with industry-leading apps for design, photo, video, and creative AI.</p>
+
+      <div class="tabs" role="tablist">
+        <button type="button" class="active" aria-selected="true">Individuals</button>
+        <button type="button">Business</button>
+        <button type="button">Students and teachers</button>
+        <button type="button">Schools and universities</button>
+      </div>
+    </section>
+
+    <div class="cards">
+      <article class="card">
+        <div class="card-title">
+          <span class="icon">Fi</span>
+          <h2>Adobe Firefly Pro</h2>
+        </div>
+        <div class="price">
+          <div class="amount">US$19.99/mo</div>
+          <div class="cycle">Monthly</div>
+        </div>
+        <p class="card-desc">Get 4,000 credits for creative AI, edit with Adobe Photoshop on web and mobile, and design with Adobe Express Premium.</p>
+        <button class="btn-select">Select</button>
+        <div class="features">
+          <h3>What you get</h3>
+          <ul>
+            <li>Firefly on web and mobile</li>
+            <li>4,000 monthly generative credits</li>
+            <li>Unlimited access to standard AI features</li>
+            <li>Premium AI: up to 40 five-second videos or 13 min audio translation</li>
+            <li>AI models from Adobe, Google, OpenAI, and more</li>
+            <li>Adobe Express Premium and Photoshop on web and mobile</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-title">
+          <span class="icon">Ps</span>
+          <h2>Creative Cloud Single App</h2>
+        </div>
+        <div class="price">
+          <div class="amount">US$22.99/mo</div>
+          <div class="cycle">Annual, billed monthly</div>
+        </div>
+        <p class="card-desc">Get full access to one Creative Cloud app, such as Photoshop, Illustrator, or Premiere.</p>
+        <button class="btn-select">Choose app</button>
+        <div class="features">
+          <h3>What you get</h3>
+          <ul>
+            <li>One app of your choice</li>
+            <li>25 monthly generative credits</li>
+            <li>Standard AI features (Generative Fill and more)</li>
+            <li>Fonts, tutorials, and more</li>
+            <li>100GB cloud storage</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card featured">
+        <span class="badge">Best value</span>
+        <div class="card-title">
+          <span class="icon">CC</span>
+          <h2>Creative Cloud Pro</h2>
+        </div>
+        <div class="price">
+          <div class="amount">US$69.99/mo</div>
+          <div class="cycle">Annual, billed monthly</div>
+        </div>
+        <p class="card-desc">Full access to 20+ apps including Photoshop, Illustrator, Premiere, Acrobat Pro, plus Adobe Firefly creative AI.</p>
+        <button class="btn-select">Restart</button>
+        <div class="features">
+          <h3>What you get</h3>
+          <ul>
+            <li>20+ photo, design, and video apps + Firefly</li>
+            <li>4,000 monthly generative credits</li>
+            <li>Unlimited standard AI (Generative Fill and more)</li>
+            <li>Premium AI: videos and audio translation</li>
+            <li>AI models from Adobe, Google, OpenAI, and more</li>
+            <li>Express Premium, Frame.io, fonts, tutorials, and more</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <p class="see-all">
+      <a href="#">See all single apps</a>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10l5 5 5-5"/></svg>
+    </p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.tabs button').forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+      });
+    });
+  </script>
+</body>
+</html>

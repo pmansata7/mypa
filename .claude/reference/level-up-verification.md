@@ -1,13 +1,13 @@
 # Level-Up Feature: Data Collection Verification
 
-**Purpose:** Verify that usage tracking works correctly to power `/dex-level-up` recommendations.
+**Purpose:** Verify that usage tracking works correctly to power `/lumi-level-up` recommendations.
 
 ---
 
 ## Data Flow Architecture
 
 ```
-User Action → Command Execution → Usage Log Update → /dex-level-up Analysis → Recommendations
+User Action → Command Execution → Usage Log Update → /lumi-level-up Analysis → Recommendations
 ```
 
 ---
@@ -32,10 +32,10 @@ These commands have explicit tracking steps added:
 
 ### 2. System Behavior (CLAUDE.md Guidance)
 
-CLAUDE.md (lines 173-186) instructs Dex to track usage automatically:
+CLAUDE.md (lines 173-186) instructs Lumi to track usage automatically:
 
 > **Usage Tracking (Silent)**
-> Track feature adoption in `System/usage_log.md` to power `/dex-level-up` recommendations:
+> Track feature adoption in `System/usage_log.md` to power `/lumi-level-up` recommendations:
 > 
 > **When to update (automatically, no announcement):**
 > - User runs a command → Check that command's box
@@ -59,7 +59,7 @@ Some features are tracked by detecting their existence in the vault:
 | Tasks created | Check 03-Tasks/Tasks.md or MCP history | `- [x] Task created (via MCP)` |
 
 **Verification:**
-- `/dex-level-up` can read file system to detect usage
+- `/lumi-level-up` can read file system to detect usage
 - No explicit tracking needed for these features
 
 ---
@@ -72,7 +72,7 @@ Some features are tracked by detecting their existence in the vault:
 1. User completes onboarding → No boxes checked yet
 2. Runs `/daily-plan` for 7 consecutive days
 3. Creates 2 tasks via MCP
-4. Runs `/dex-level-up`
+4. Runs `/lumi-level-up`
 
 **Expected State in `System/usage_log.md`:**
 
@@ -90,12 +90,12 @@ Some features are tracked by detecting their existence in the vault:
 ...
 
 ## Tracking Metadata
-- Last dex-level-up prompt: (not yet prompted)
+- Last lumi-level-up prompt: (not yet prompted)
 - First daily plan: 2026-01-21
 - Setup date: 2026-01-20
 ```
 
-**Expected `/dex-level-up` Output:**
+**Expected `/lumi-level-up` Output:**
 
 Recommendations:
 1. **Daily Review** - Complete the planning loop
@@ -104,7 +104,7 @@ Recommendations:
 
 **Verification Steps:**
 1. Check `usage_log.md` has correct checked boxes
-2. `/dex-level-up` correctly counts 2 of ~25 features used
+2. `/lumi-level-up` correctly counts 2 of ~25 features used
 3. Recommendations are relevant to daily planning habit
 4. No mention of weekly/quarterly planning (too early)
 
@@ -119,7 +119,7 @@ Recommendations:
 4. Meeting processing: 3 times
 5. Person pages: 5 created
 6. Tasks: 23 created, 15 completed
-7. Runs `/dex-level-up`
+7. Runs `/lumi-level-up`
 
 **Expected State in `System/usage_log.md`:**
 
@@ -145,7 +145,7 @@ Recommendations:
 ...
 ```
 
-**Expected `/dex-level-up` Output:**
+**Expected `/lumi-level-up` Output:**
 
 Recommendations:
 1. **Weekly Review** - Natural next step after weekly planning
@@ -170,7 +170,7 @@ Recommendations:
 5. Journaling enabled (morning & evening)
 6. 12 insights saved
 7. 156 tasks created, 134 completed
-8. Runs `/dex-level-up`
+8. Runs `/lumi-level-up`
 
 **Expected State in `System/usage_log.md`:**
 
@@ -209,18 +209,18 @@ Recommendations:
 
 ## Advanced
 - [ ] Custom MCP created (/create-mcp)  ← Only unchecked advanced feature
-- [ ] System improvements (/dex-improve)
+- [ ] System improvements (/lumi-improve)
 - [ ] Prompt improvement (/prompt-improver)
-- [x] Demo mode (/dex-demo)
+- [x] Demo mode (/lumi-demo)
 ```
 
-**Expected `/dex-level-up` Output:**
+**Expected `/lumi-level-up` Output:**
 
 Recommendations:
 1. **Custom MCP Integration** - Automate CRM sync
-2. **System Customization** - Make Dex yours
+2. **System Customization** - Make Lumi yours
 
-Celebration message: "You're using Dex like a pro! 🎉"
+Celebration message: "You're using Lumi like a pro! 🎉"
 
 **Verification Steps:**
 1. System recognizes power user status (21+ features checked)
@@ -245,15 +245,15 @@ Celebration message: "You're using Dex like a pro! 🎉"
 
 ---
 
-### ✅ 2. /dex-level-up Can Read Usage Log
+### ✅ 2. /lumi-level-up Can Read Usage Log
 
 **Test:**
-- `/dex-level-up` command reads `System/usage_log.md`
+- `/lumi-level-up` command reads `System/usage_log.md`
 - Parses markdown checkboxes correctly
 - Counts checked vs unchecked items
 
 **Files:**
-- `.claude/skills/dex-level-up/SKILL.md` Step 1 (read logic)
+- `.claude/skills/lumi-level-up/SKILL.md` Step 1 (read logic)
 
 ---
 
@@ -265,8 +265,8 @@ Celebration message: "You're using Dex like a pro! 🎉"
 - User with tasks but no projects → Suggests project tracking
 
 **Files:**
-- `.claude/skills/dex-level-up/SKILL.md` Step 2 (pattern analysis)
-- `.claude/skills/dex-level-up/SKILL.md` Step 3 (recommendation generation)
+- `.claude/skills/lumi-level-up/SKILL.md` Step 2 (pattern analysis)
+- `.claude/skills/lumi-level-up/SKILL.md` Step 3 (recommendation generation)
 
 ---
 
@@ -304,19 +304,19 @@ Celebration message: "You're using Dex like a pro! 🎉"
 ### Empty Usage Log (First Time)
 
 **Expected:**
-- `/dex-level-up` shows: "Looks like you're just getting started!"
+- `/lumi-level-up` shows: "Looks like you're just getting started!"
 - Recommends 3 essentials: daily planning, task management, meeting capture
 
 ### All Features Used
 
 **Expected:**
-- `/dex-level-up` shows celebration: "You're using every feature in Dex! 🎉"
+- `/lumi-level-up` shows celebration: "You're using every feature in Lumi! 🎉"
 - Suggests custom MCPs, system improvements, sharing knowledge
 
 ### User Says "Show Me Everything"
 
 **Expected:**
-- `/dex-level-up` says: "I could, but that's overwhelming..."
+- `/lumi-level-up` says: "I could, but that's overwhelming..."
 - Points to CLAUDE.md, .claude/skills/, and System Guide
 
 ---
@@ -326,11 +326,11 @@ Celebration message: "You're using Dex like a pro! 🎉"
 - [x] Created `System/usage_log.md` with all features listed
 - [x] Added explicit tracking to core commands (daily-plan, review, week-plan, week-review)
 - [x] Added CLAUDE.md guidance for system-wide tracking behavior
-- [x] Created `/dex-level-up` command with pattern analysis logic
+- [x] Created `/lumi-level-up` command with pattern analysis logic
 - [x] Added README section highlighting feature discovery
-- [x] Added onboarding mention of `/dex-level-up`
+- [x] Added onboarding mention of `/lumi-level-up`
 - [x] Added smart trigger to `/daily-plan` (7-day cooldown)
-- [x] Tested scenario recommendations (examples in dex-level-up.md)
+- [x] Tested scenario recommendations (examples in lumi-level-up.md)
 
 ---
 
@@ -341,7 +341,7 @@ Celebration message: "You're using Dex like a pro! 🎉"
 1. Add entry to `System/usage_log.md` in appropriate section
 2. Update CLAUDE.md if it's a new pattern (optional)
 3. Consider explicit tracking in command file if it's a core workflow
-4. Update `/dex-level-up` command if new progression patterns emerge
+4. Update `/lumi-level-up` command if new progression patterns emerge
 
 **No need to:**
 - Update every single command file manually

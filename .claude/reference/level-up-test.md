@@ -1,4 +1,4 @@
-# /dex-level-up Feature Test
+# /lumi-level-up Feature Test
 
 **Purpose:** Practical test to verify data collection and recommendation logic works correctly.
 
@@ -54,7 +54,7 @@ grep "Daily planning" System/usage_log.md
 - [ ] Weekly review (/week-review)
 
 ## Tracking Metadata
-- **Last dex-level-up prompt:** (not yet prompted)
+- **Last lumi-level-up prompt:** (not yet prompted)
 - **First daily plan:** 2026-01-21
 ```
 
@@ -78,11 +78,11 @@ grep "Daily planning" System/usage_log.md
    ```markdown
    ---
    
-   💡 **Tip:** You're using 1 of 25 Dex features. Run `/dex-level-up` to see what you might be missing.
+   💡 **Tip:** You're using 1 of 25 Lumi features. Run `/lumi-level-up` to see what you might be missing.
    ```
 4. Updates usage log metadata:
    ```markdown
-   - **Last dex-level-up prompt:** 2026-01-28
+   - **Last lumi-level-up prompt:** 2026-01-28
    ```
 
 **Verification:**
@@ -91,13 +91,13 @@ grep "Daily planning" System/usage_log.md
 grep "💡 Tip" 00-Inbox/Daily_Plans/2026-01-28.md
 
 # Check metadata was updated
-grep "Last dex-level-up prompt" System/usage_log.md
-# Expected: "- **Last dex-level-up prompt:** 2026-01-28"
+grep "Last lumi-level-up prompt" System/usage_log.md
+# Expected: "- **Last lumi-level-up prompt:** 2026-01-28"
 ```
 
 ---
 
-## Test 3: User Runs /dex-level-up
+## Test 3: User Runs /lumi-level-up
 
 **Starting State:**
 
@@ -137,12 +137,12 @@ grep "Last dex-level-up prompt" System/usage_log.md
 
 ## Advanced
 - [ ] Custom MCP created (/create-mcp)
-- [ ] System improvements (/dex-improve)
+- [ ] System improvements (/lumi-improve)
 - [ ] Prompt improvement (/prompt-improper)
-- [ ] Demo mode (/dex-demo)
+- [ ] Demo mode (/lumi-demo)
 ```
 
-**Action:** User types `/dex-level-up`
+**Action:** User types `/lumi-level-up`
 
 **Expected Behavior:**
 
@@ -156,9 +156,9 @@ grep "Last dex-level-up prompt" System/usage_log.md
 4. Displays output (Step 4):
 
 ```markdown
-# 🚀 Level Up Your Dex System
+# 🚀 Level Up Your Lumi System
 
-Based on your usage, here are **3 ways to get more value** from Dex:
+Based on your usage, here are **3 ways to get more value** from Lumi:
 
 ---
 
@@ -224,7 +224,7 @@ Just say the number or feature name, and I'll guide you through it.
 
 **Action:** 
 1. User says: "Let's try #1" or "I'll do the daily review"
-2. Dex guides them through `/review` command
+2. Lumi guides them through `/review` command
 3. Review completes successfully
 
 **Expected Behavior:**
@@ -237,7 +237,7 @@ At end of `/review` command (Step 6):
 2. No announcement about tracking update
 3. User sees only the daily review output
 
-**Next Time User Runs `/dex-level-up`:**
+**Next Time User Runs `/lumi-level-up`:**
 
 System recognizes:
 - Daily planning: ✅
@@ -255,7 +255,7 @@ New recommendations:
 grep "Daily review" System/usage_log.md
 # Expected: "- [x] Daily review (/review)"
 
-# Next /dex-level-up won't suggest daily review again
+# Next /lumi-level-up won't suggest daily review again
 # (already checked)
 ```
 
@@ -268,7 +268,7 @@ grep "Daily review" System/usage_log.md
 `System/usage_log.md`:
 ```markdown
 ## Tracking Metadata
-- **Last dex-level-up prompt:** 2026-01-28
+- **Last lumi-level-up prompt:** 2026-01-28
 ```
 
 **Action:** User runs `/daily-plan` on 2026-01-29 (next day)
@@ -340,12 +340,12 @@ grep "Daily review" System/usage_log.md
 
 ## Advanced
 - [ ] Custom MCP created (/create-mcp)
-- [ ] System improvements (/dex-improve)
+- [ ] System improvements (/lumi-improve)
 - [ ] Prompt improvement (/prompt-improper)
-- [x] Demo mode (/dex-demo)
+- [x] Demo mode (/lumi-demo)
 ```
 
-**Action:** User runs `/dex-level-up`
+**Action:** User runs `/lumi-level-up`
 
 **Expected Behavior:**
 
@@ -355,9 +355,9 @@ grep "Daily review" System/usage_log.md
 4. Shows advanced recommendations:
 
 ```markdown
-# 🚀 Level Up Your Dex System
+# 🚀 Level Up Your Lumi System
 
-You're using Dex like a pro! 🎉 Here are **2 advanced capabilities** that could 
+You're using Lumi like a pro! 🎉 Here are **2 advanced capabilities** that could 
 take your system even further:
 
 ---
@@ -376,14 +376,14 @@ would save 15-20 minutes per week.
 
 ---
 
-## 2. System Customization - Make Dex Yours
+## 2. System Customization - Make Lumi Yours
 
 **What you're missing:** You've earned the right to bend the system to your needs.
 
 **Why it's relevant:** After consistent use, you know your patterns. Customize 
 commands and workflows for your exact needs.
 
-**How to start:** Run `/dex-improve` and describe what you wish worked differently.
+**How to start:** Run `/lumi-improve` and describe what you wish worked differently.
 
 **Time:** Varies by customization, but the ROI compounds forever
 
@@ -441,7 +441,7 @@ could help someone just getting started.
 ## Running These Tests
 
 **Manual testing:**
-1. Fresh install Dex
+1. Fresh install Lumi
 2. Run through each test scenario
 3. Verify expected outputs match
 
@@ -453,5 +453,5 @@ Could build test suite, but manual testing is sufficient given:
 
 **Regression testing:**
 - When adding new commands, add checkbox to usage_log.md
-- Test `/dex-level-up` still recommends correctly
+- Test `/lumi-level-up` still recommends correctly
 - Verify smart trigger still works in daily-plan

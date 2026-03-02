@@ -328,5 +328,5 @@ Based on weekly priorities and today's carryover:
 
 | Integration | MCP Server | Tools Used |
 |-------------|------------|------------|
-| Work | dex-work-mcp | `list_tasks`, `get_week_progress`, `get_commitments_due`, `analyze_calendar_capacity` |
-| Calendar | dex-calendar-mcp | `calendar_get_today` |
+| Work | lumi-work-mcp | `list_tasks`, `get_week_progress`, `get_commitments_due`, `analyze_calendar_capacity` |
+| Calendar | lumi-calendar-mcp | `calendar_get_today` |

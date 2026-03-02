@@ -3,7 +3,7 @@
 
 set -e
 
-SKILLS_DIR="/Users/dave/Dex/Dex/.claude/skills"
+SKILLS_DIR="/Users/dave/Lumi/Lumi/.claude/skills"
 
 fix_skill() {
   local skill_name=$1

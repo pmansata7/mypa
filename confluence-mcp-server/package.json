@@ -1,0 +1,16 @@
+{
+  "name": "confluence-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Confluence Server/Data Center integration (read-only)",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "confluence-mcp-server": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

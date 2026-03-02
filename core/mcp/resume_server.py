@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Resume Builder MCP Server for Dex
+Resume Builder MCP Server for Lumi
 
 Provides stateful, deterministic resume building with validation,
 formatting, and career evidence integration.
@@ -88,7 +88,7 @@ SESSIONS_DIR.mkdir(parents=True, exist_ok=True)
 sessions: Dict[str, ResumeSession] = {}
 
 # Initialize the MCP server
-app = Server("dex-resume-mcp")
+app = Server("lumi-resume-mcp")
 
 
 # ============================================================================
@@ -1160,7 +1160,7 @@ async def handle_export_resume(arguments: dict) -> list[types.TextContent]:
 
 async def _main():
     """Async main entry point for the MCP server"""
-    logger.info("Starting Dex Resume Builder MCP Server")
+    logger.info("Starting Lumi Resume Builder MCP Server")
     logger.info(f"Vault path: {BASE_DIR}")
     logger.info(f"Resume directory: {RESUME_DIR}")
     logger.info(f"Sessions directory: {SESSIONS_DIR}")
@@ -1171,7 +1171,7 @@ async def _main():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="dex-resume-mcp",
+                server_name="lumi-resume-mcp",
                 server_version="1.0.0",
                 capabilities=app.get_capabilities(
                     notification_options=NotificationOptions(),

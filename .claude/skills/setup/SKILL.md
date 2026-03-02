@@ -1,6 +1,6 @@
 ---
 name: setup
-description: Initial Dex system setup and onboarding
+description: Initial Lumi system setup and onboarding
 disable-model-invocation: true
 ---
 
@@ -9,7 +9,7 @@ name: setup
 description: Set up your personal knowledge system with a simple conversation
 ---
 
-# Set Up Your Dex
+# Set Up Your Lumi
 
 Guide the user through a friendly, conversational setup. No technical steps required.
 
@@ -21,7 +21,7 @@ Have a conversation to understand who the user is and what they need. Then gener
 
 ### Step 1: Welcome
 
-Say: "Welcome to Dex! I'm your personal knowledge assistant. Let's get you set up in about 2 minutes."
+Say: "Welcome to Lumi! I'm your personal knowledge assistant. Let's get you set up in about 2 minutes."
 
 "First, what's your name?"
 
@@ -126,7 +126,7 @@ If cache not found:
 
 If cache found, ask:
 
-> "Great! Dex can process your Granola meetings to extract summaries, action items, and update person pages.
+> "Great! Lumi can process your Granola meetings to extract summaries, action items, and update person pages.
 >
 > **How would you like to process meetings?**
 >
@@ -139,7 +139,7 @@ If cache found, ask:
 **If Manual (option 1):**
 - No additional setup needed
 - Update `System/user-profile.yaml` with `meeting_processing: manual`
-- Say: "You're all set! Run `/process-meetings` after your meetings to pull them into Dex."
+- Say: "You're all set! Run `/process-meetings` after your meetings to pull them into Lumi."
 
 **If Automatic (option 2):**
 
@@ -244,7 +244,7 @@ Show a brief summary:
 
 **Optional:** If this is a fresh start, mention:
 
-> "Tip: Want to explore with sample data first? Run `/dex-demo on` to try demo mode with pre-populated content. You can switch back anytime with `/dex-demo off`."
+> "Tip: Want to explore with sample data first? Run `/lumi-demo on` to try demo mode with pre-populated content. You can switch back anytime with `/lumi-demo off`."
 
 End with: "What would you like to work on first?"
 
@@ -258,7 +258,7 @@ No automated import needed - simple manual copy works for everyone.
 
 ## Viewing Your Notes
 
-Dex creates markdown files you can view with any app:
+Lumi creates markdown files you can view with any app:
 - VS Code or Cursor (where you're running Claude)
 - Obsidian (popular free option)
 - Notion (can import markdown)
@@ -267,35 +267,35 @@ Dex creates markdown files you can view with any app:
 ## Example Conversation
 
 ```
-Dex: Welcome to Dex! I'm your personal knowledge assistant. Let's get you set up in about 2 minutes.
+Lumi: Welcome to Lumi! I'm your personal knowledge assistant. Let's get you set up in about 2 minutes.
 
 First, what's your name?
 
 User: Sarah
 
-Dex: Nice to meet you, Sarah! What's your role?
+Lumi: Nice to meet you, Sarah! What's your role?
 
 [Shows role list]
 
 User: 1
 
-Dex: Product Manager - great choice! What's your company size?
+Lumi: Product Manager - great choice! What's your company size?
 
 [Shows size options]
 
 User: 2
 
-Dex: Got it, you're at a scaling company (100-1,000 people). 
+Lumi: Got it, you're at a scaling company (100-1,000 people). 
 
 What are your 2-3 main priorities right now? These will become your strategic pillars.
 
 User: Launching our mobile app, improving customer retention, and building out the PM team
 
-Dex: Perfect priorities! Would you like me to research your public work to better understand your context?
+Lumi: Perfect priorities! Would you like me to research your public work to better understand your context?
 
 User: No thanks
 
-Dex: No problem! You're all set, Sarah!
+Lumi: No problem! You're all set, Sarah!
 
 Here's what I created for you:
 - **Role:** Product Manager at a scaling company

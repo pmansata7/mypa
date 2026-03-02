@@ -37,24 +37,24 @@
 - `project-health` - Check project status
 - `product-brief` - Create PRD through questions
 
-**Dex System Improvements (3):**
-- `dex-level-up` - Discover unused features
-- `dex-backlog` - Review improvement ideas
-- `dex-improve` - Workshop improvements
+**Lumi System Improvements (3):**
+- `lumi-level-up` - Discover unused features
+- `lumi-backlog` - Review improvement ideas
+- `lumi-improve` - Workshop improvements
 
 **System/Utility (7):**
-- `dex-demo` - Toggle demo mode
+- `lumi-demo` - Toggle demo mode
 - `setup` - Initial setup
 - `reset` - Restructure system
 - `prompt-improver` - Improve prompts
 - `save-insight` - Capture learnings
 - `create-mcp` - Create MCP integrations
-- `dex-whats-new` - Check for updates
+- `lumi-whats-new` - Check for updates
 
 ### Files Consolidated
-- `level-up.md` → Merged into `dex-level-up`
-- `review-ideas.md` → Merged into `dex-backlog`
-- `review-backlog.md` → Merged into `dex-backlog` (duplicate removed)
+- `level-up.md` → Merged into `lumi-level-up`
+- `review-ideas.md` → Merged into `lumi-backlog`
+- `review-backlog.md` → Merged into `lumi-backlog` (duplicate removed)
 
 ### Key Improvements
 
@@ -87,10 +87,10 @@
 Updated these files to reference `.claude/skills/`:
 - ✅ `CLAUDE.md` - Main system docs
 - ✅ `CHANGELOG.md` - Migration entry
-- ✅ `06-Resources/Dex_System/Dex_System_Guide.md` - System guide
-- ✅ `.claude/skills/dex-improve/SKILL.md` - Self-reference
-- ✅ `.claude/skills/dex-backlog/SKILL.md` - Self-reference
-- ✅ `.claude/skills/dex-level-up/SKILL.md` - Self-reference
+- ✅ `06-Resources/Lumi_System/Lumi_System_Guide.md` - System guide
+- ✅ `.claude/skills/lumi-improve/SKILL.md` - Self-reference
+- ✅ `.claude/skills/lumi-backlog/SKILL.md` - Self-reference
+- ✅ `.claude/skills/lumi-level-up/SKILL.md` - Self-reference
 - ✅ `.claude/skills/README.md` - Created overview
 
 ## Backward Compatibility
@@ -105,8 +105,8 @@ You can safely delete `.claude/commands/` once you've verified all skills work c
 
 All skills are immediately available. Test with:
 - `/daily-plan` - Try a core workflow skill
-- `/dex-demo on` - Try a system control skill
-- `/dex-level-up` - Try a discovery skill
+- `/lumi-demo on` - Try a system control skill
+- `/lumi-level-up` - Try a discovery skill
 
 ## Before & After
 
